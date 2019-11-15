@@ -1,0 +1,15 @@
+uuid: 4254e62c-dc13-4f59-b010-8d47dd360b3d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - flag.flag.compare
+  module:
+    - flag
+id: flag_action.compare_flag
+label: '<span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> Сравнить'
+type: commerce_product
+plugin: 'flag_action:compare_flag'
+configuration:
+  flag_id: compare
+  flag_action: flag

@@ -1,0 +1,105 @@
+uuid: 1a9ebc98-c8ef-4446-aedf-dd267844fece
+langcode: ru
+status: true
+dependencies:
+  config:
+    - page_manager.page.frontpage
+    - views.view.brand
+    - views.view.new_products
+    - views.view.sales
+    - views.view.top_products
+  content:
+    - 'block_content:basic:f80481fd-aa28-4cf7-9211-278b44e42409'
+  module:
+    - block_content
+    - panels
+    - views
+id: frontpage-panels_variant-0
+label: Панели
+variant: panels_variant
+variant_settings:
+  blocks:
+    cbfc563f-8c43-4094-9c93-38e74ab1f3b5:
+      id: 'views_block:new_products-block_1'
+      label: 'Новые товары'
+      provider: views
+      label_display: visible
+      views_label: 'Новые товары'
+      items_per_page: '8'
+      region: main
+      weight: -2
+      uuid: cbfc563f-8c43-4094-9c93-38e74ab1f3b5
+      context_mapping: {  }
+    6d5459f1-649f-4567-b994-8229d87c66c2:
+      id: 'views_block:top_products-block_1'
+      label: 'Хиты продаж'
+      provider: views
+      label_display: visible
+      views_label: 'Хиты продаж'
+      items_per_page: '8'
+      region: main
+      weight: -1
+      uuid: 6d5459f1-649f-4567-b994-8229d87c66c2
+      context_mapping: {  }
+    fbde73e4-436c-437a-bafe-8bb116876075:
+      id: 'views_block:sales-block_1'
+      label: Распродажа
+      provider: views
+      label_display: visible
+      views_label: Распродажа
+      items_per_page: none
+      region: main
+      weight: 0
+      uuid: fbde73e4-436c-437a-bafe-8bb116876075
+      context_mapping: {  }
+    6300779e-3830-497b-9c40-cc3290d9c0c3:
+      id: 'views_block:brand-block_1'
+      label: Бренды
+      provider: views
+      label_display: visible
+      views_label: Бренды
+      items_per_page: '12'
+      region: main
+      weight: 1
+      uuid: 6300779e-3830-497b-9c40-cc3290d9c0c3
+      context_mapping: {  }
+    a49c430e-5d51-47dc-90fe-737d3d98261e:
+      id: 'block_content:f80481fd-aa28-4cf7-9211-278b44e42409'
+      label: 'Описание на главной'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: main
+      weight: 2
+      uuid: a49c430e-5d51-47dc-90fe-737d3d98261e
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 00ded1a9-6351-4301-bbe8-1a617b965040
+  label: null
+  weight: 0
+  layout: bs_1col
+  layout_settings:
+    layout:
+      wrapper: div
+      classes:
+        row: row
+      add_layout_class: 1
+      attributes: ''
+    regions:
+      main:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+  page_title: ''
+  storage_type: page_manager
+  storage_id: frontpage-panels_variant-0
+  builder: standard
+page: frontpage
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

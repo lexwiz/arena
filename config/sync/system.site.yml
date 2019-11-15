@@ -1,0 +1,15 @@
+uuid: ac821b59-29f8-4a4e-bf06-cc965825032d
+name: KanzArena
+mail: lexsaenko@yandex.ru
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /frontpage
+admin_compact_mode: false
+weight_select_max: 100
+langcode: ru
+default_langcode: ru
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
+mail_notification: ''

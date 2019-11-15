@@ -1,0 +1,23 @@
+uuid: 6c96b074-a3fc-4ba6-9bb2-29b85f0bf11f
+langcode: ru
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: country
+label: Country
+type: 'canonical_entities:taxonomy_term'
+pattern: 'country/[term:name]'
+selection_criteria:
+  8e93568b-c021-4ad8-a75d-eb75883e49cd:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      country: country
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 8e93568b-c021-4ad8-a75d-eb75883e49cd
+selection_logic: and
+weight: -5
+relationships: {  }

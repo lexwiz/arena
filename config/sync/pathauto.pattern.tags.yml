@@ -1,0 +1,23 @@
+uuid: 2c2aa8ae-5abc-42a1-ab10-bb71c6cf4c33
+langcode: ru
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: tags
+label: Tags
+type: 'canonical_entities:taxonomy_term'
+pattern: 'tags/[term:name]'
+selection_criteria:
+  477403d3-2910-4c53-a8ad-016eba2ea7b3:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      tags: tags
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 477403d3-2910-4c53-a8ad-016eba2ea7b3
+selection_logic: and
+weight: -5
+relationships: {  }

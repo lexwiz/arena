@@ -1,0 +1,142 @@
+uuid: 3d324fef-21b8-43ad-a0a4-a4720d46d566
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.default
+    - field.field.commerce_product_variation.default.field_barcode
+    - field.field.commerce_product_variation.default.field_code_stock
+    - field.field.commerce_product_variation.default.field_sku_m
+    - field.field.commerce_product_variation.default.field_stock
+  module:
+    - commerce_feeds
+    - commerce_product
+    - feeds_tamper
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      6a4db356-60d1-43d9-bfa6-504106778cb8:
+        num_char: 13
+        ellipses: false
+        wordsafe: false
+        plugin: truncate_text
+        source: barcode
+        weight: 0
+        label: Truncate
+        uuid: 6a4db356-60d1-43d9-bfa6-504106778cb8
+      cde944fa-b5ef-4695-8aa9-859cb70217e4:
+        find: ','
+        replace: .
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: price
+        weight: 0
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: cde944fa-b5ef-4695-8aa9-859cb70217e4
+label: 'Import Products variation'
+id: import_products_variation
+description: ''
+help: null
+import_period: -1
+fetcher: directory
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  allowed_schemes:
+    public: public
+  recursive_scan: false
+parser: csv
+parser_configuration:
+  delimiter: ;
+  no_headers: false
+  line_limit: 100
+processor: 'entity:commerce_product_variation'
+processor_configuration:
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: default
+custom_sources:
+  sku:
+    label: SKU
+    value: SKU
+    machine_name: sku
+  title:
+    label: Title
+    value: Title
+    machine_name: title
+  price:
+    label: Price
+    value: Price
+    machine_name: price
+  barcode:
+    label: Barcode
+    value: Barcode
+    machine_name: barcode
+  code:
+    label: Code
+    value: Code
+    machine_name: code
+  sku_m:
+    label: 'SKU M'
+    value: 'SKU M'
+    machine_name: sku_m
+  min:
+    label: Min
+    value: Min
+    machine_name: min
+  min_qt:
+    label: 'Min Qt'
+    value: 'Min Qt'
+    machine_name: min_qt
+  stock:
+    label: Stock
+    value: Stock
+    machine_name: stock
+mappings:
+  -
+    target: sku
+    map:
+      value: sku
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    unique: {  }
+  -
+    target: price
+    map:
+      number: price
+    settings:
+      currency_code: RUB
+  -
+    target: field_barcode
+    map:
+      value: barcode
+    unique: {  }
+  -
+    target: field_code_stock
+    map:
+      value: code
+    unique: {  }
+  -
+    target: field_sku_m
+    map:
+      value: sku_m
+    unique: {  }
+  -
+    target: qty_increments
+    map:
+      value: min_qt
+  -
+    target: field_stock
+    map:
+      value: stock

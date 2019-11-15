@@ -1,0 +1,23 @@
+uuid: 106f77fa-0211-4b3d-9fe0-bbb4b808a2a1
+langcode: ru
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: brand
+label: Brand
+type: 'canonical_entities:taxonomy_term'
+pattern: 'brand/[term:name]'
+selection_criteria:
+  5c0979aa-f68c-4a82-bf09-cee4f17d865a:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      brand: brand
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 5c0979aa-f68c-4a82-bf09-cee4f17d865a
+selection_logic: and
+weight: -5
+relationships: {  }

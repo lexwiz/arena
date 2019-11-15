@@ -1,0 +1,12 @@
+uuid: 13f19492-4817-478f-bf9f-122216b2b421
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_link_content
+_core:
+  default_config_hash: RcPP6Be18-i77k6ZvASVJeq6p2bRPMNPSjqrWKsjd68
+id: menu_link_content.banner
+label: Баннер
+targetEntityType: menu_link_content
+cache: true

@@ -1,0 +1,16 @@
+uuid: 796fec15-07cc-4dfa-968b-f9462ad887b6
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.main
+    - taxonomy.vocabulary.catalog
+id: catalog
+label: Catalog
+vocabulary: catalog
+menu: main
+expanded: true
+depth: 3
+menu_parent: 'main:views_view:views.catalog.page_1'
+description_field_name: ''
+use_term_weight_order: true

@@ -1,0 +1,11 @@
+uuid: 383de620-6165-48b0-83d5-efe451270056
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: puBstSLDz8mbaWU357zaqQDBGMGsJzG0j-TQNQkjg20
+id: '404'
+label: '404 страница не найдена'
+tags:
+  canonical_url: '[site:url]'
+  shortlink: '[site:url]'

@@ -1,0 +1,20 @@
+super_login:
+  login_text: 'Username or e-mail address'
+  forgot_pw_text: 'Forgot Password?'
+  capslock_msg: 'Вы нажали клавишу Caps Lock'
+  new_account_text: 'Create new account'
+  login_title: 'Log in'
+  password_reset_title: 'Password Reset'
+  back_link: 'Go back to the login page.'
+  messages: 1
+  css: 1
+  button_theme: 1
+  placeholder: 1
+  autofocus: 1
+  login_type: '0'
+  capslock: 1
+  login_placeholder: 'Имя пользователя или e-mail адрес'
+  pass_placeholder: Пароль
+_core:
+  default_config_hash: 40PEfTxDXrGIEMpBk7roSKP-AJXLYjgRbAbDEy0CBPM
+langcode: ru

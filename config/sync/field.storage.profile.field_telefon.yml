@@ -1,0 +1,23 @@
+uuid: d7936f99-0ac8-483a-8684-e90bc7f9d7b2
+langcode: ru
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - profile
+    - telephone
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: profile.field_telefon
+field_name: field_telefon
+entity_type: profile
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

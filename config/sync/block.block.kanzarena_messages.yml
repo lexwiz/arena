@@ -1,0 +1,22 @@
+uuid: c467fa23-d04a-4589-b233-cb61f138f131
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kanzarena
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: kanzarena_messages
+theme: kanzarena
+region: highlighted
+weight: -10
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Сообщения статуса'
+  provider: system
+  label_display: '0'
+visibility: {  }

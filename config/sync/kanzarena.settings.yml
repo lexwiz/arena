@@ -1,0 +1,46 @@
+schemas:
+  bootstrap: 8000
+  kanzarena: 8000
+cdn_provider: ''
+_core:
+  default_config_hash: 71vTnk5szuOQRTsOR-S5bjCzPvkxtx_eVGMqYa_mcqc
+favicon:
+  mimetype: image/png
+  path: 'public://KanzArena Icon.png'
+  url: 'http://kanzarena.localhost:8000/sites/default/files/KanzArena%20Icon.png'
+  use_default: false
+table_responsive: '-1'
+region_wells:
+  navigation: ''
+  navigation_collapsible: ''
+  header: ''
+  highlighted: ''
+  help: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: ''
+  footer_first: ''
+  footer_second: ''
+  footer_third: ''
+  footer_four: ''
+  footer: ''
+cdn_theme: ''
+cdn_cache_ttl_versions: 0
+cdn_cache_ttl_themes: 0
+cdn_cache_ttl_assets: 0
+cdn_cache_ttl_library: 0
+reset_http_request_cache: ''
+table: ''
+logo:
+  path: 'public://KanzArena Logo.png'
+  url: ''
+  use_default: false
+navbar_position: fixed-top
+breadcrumb_home: 1
+navbar_inverse: 0
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+langcode: ru

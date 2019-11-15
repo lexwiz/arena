@@ -1,0 +1,26 @@
+uuid: ef9b8a83-093b-430a-bf71-726d2ba86b4b
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_checkout
+    - system
+  theme:
+    - kanzarena
+id: progressoformleniya
+theme: kanzarena
+region: highlighted
+weight: -9
+provider: null
+plugin: commerce_checkout_progress
+settings:
+  id: commerce_checkout_progress
+  label: 'Прогресс оформления'
+  provider: commerce_checkout
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: 'checkout/*'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,20 @@
+uuid: 483f7ded-263d-4176-b79b-8f36020a2e01
+langcode: ru
+status: true
+dependencies:
+  theme:
+    - kanzarena
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: kanzarena_page_title
+theme: kanzarena
+region: content
+weight: -10
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Заголовок страницы'
+  provider: core
+  label_display: '0'
+visibility: {  }

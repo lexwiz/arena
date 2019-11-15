@@ -1,0 +1,19 @@
+uuid: 3041dc85-a2fe-4368-b6e5-565bec328e70
+langcode: ru
+status: true
+dependencies: {  }
+id: bank_transfer
+label: 'Bank Transfer'
+weight: -10
+plugin: manual
+configuration:
+  instructions:
+    value: "<p>Оплата производиться на расчетный счет в банке. Реквизиты вы можете узнать в разделе <a href=\"https://www.kanzarena.ru/info/o-kompanii\">О компании</a>. При безналичной оплате, через банк, заказ отгружается только после зачисления денег на банковский счет нашей компании (при отсутсвии договора поставки). При получении заказа Вам будет необходимо заверить сопроводительные документы круглой печатью организации, либо потребуется доверенность по форме М-2. Оригиналы документов для бухгалтерии мы предоставим Вам вместе с заказом при получении.</p>\r\n"
+    format: full_html
+  display_label: 'Безналичный расчет'
+  mode: n/a
+  payment_method_types:
+    - credit_card
+  collect_billing_information: true
+conditions: {  }
+conditionOperator: AND

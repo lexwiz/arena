@@ -1,0 +1,25 @@
+uuid: 299e488f-15d8-4996-b657-203ab935e6fe
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - field_permissions
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: commerce_product_variation.field_sku_m
+field_name: field_sku_m
+entity_type: commerce_product_variation
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

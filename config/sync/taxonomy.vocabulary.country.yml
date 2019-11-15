@@ -1,0 +1,8 @@
+uuid: 7a85fe6e-13e3-47f5-b9ce-29b26632b4d7
+langcode: ru
+status: true
+dependencies: {  }
+name: Страна
+vid: country
+description: ''
+weight: 0

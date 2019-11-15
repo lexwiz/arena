@@ -1,0 +1,20 @@
+uuid: 029e31d5-d48c-49fa-bc5a-3e9ad5f20b48
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - taxonomy
+id: commerce_product.field_country
+field_name: field_country
+entity_type: commerce_product
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

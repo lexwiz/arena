@@ -1,0 +1,10 @@
+uuid: 21fd28bf-b5bb-49c2-8876-7f297333220a
+langcode: ru
+status: true
+dependencies:
+  module:
+    - simplenews
+id: simplenews_subscriber.token
+label: Токен
+targetEntityType: simplenews_subscriber
+cache: true

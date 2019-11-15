@@ -1,0 +1,29 @@
+uuid: 2d56a45a-3143-43b2-8169-6f0b96960f9d
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f204ead4-ae26-4bc8-9770-18b2a6408a75'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - kanzarena
+third_party_settings:
+  block_class:
+    classes: 'col-xs-12 col-sm-12 col-md-2 col-lg-2'
+id: telefon
+theme: kanzarena
+region: header
+weight: -9
+provider: null
+plugin: 'block_content:f204ead4-ae26-4bc8-9770-18b2a6408a75'
+settings:
+  id: 'block_content:f204ead4-ae26-4bc8-9770-18b2a6408a75'
+  label: Telefon
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

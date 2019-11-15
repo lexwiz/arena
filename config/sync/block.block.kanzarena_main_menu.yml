@@ -1,0 +1,27 @@
+uuid: f21b50e3-3d64-4648-acda-b030cb2456a0
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - kanzarena
+_core:
+  default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
+id: kanzarena_main_menu
+theme: kanzarena
+region: navigation_collapsible
+weight: -10
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Основная навигация'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 4
+  expand_all_items: true
+visibility: {  }

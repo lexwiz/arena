@@ -1,0 +1,20 @@
+uuid: ccc1da22-f0ba-46a4-a416-7364fc9688de
+langcode: ru
+status: true
+dependencies:
+  theme:
+    - kanzarena
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: kanzarena_local_actions
+theme: kanzarena
+region: content
+weight: -8
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Основные действия администратора'
+  provider: core
+  label_display: '0'
+visibility: {  }

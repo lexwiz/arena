@@ -1,0 +1,25 @@
+uuid: 689510dd-d95e-4a1e-beff-4753c66cb42e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.footer-menu-add
+  module:
+    - system
+  theme:
+    - kanzarena
+id: footermenuadd
+theme: kanzarena
+region: footer_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-menu-add'
+settings:
+  id: 'system_menu_block:footer-menu-add'
+  label: 'Footer menu add'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

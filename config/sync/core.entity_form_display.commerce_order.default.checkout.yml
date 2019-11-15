@@ -1,0 +1,36 @@
+uuid: d38a11ac-cc86-40bd-b03e-d5171890ae73
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_type.default
+    - core.entity_form_mode.commerce_order.checkout
+    - field.field.commerce_order.default.field_comment_order
+    - field.field.commerce_order.default.order_items
+_core:
+  default_config_hash: Br0BiFVvdCJWLskqoMDvCxXmAhyoP7RyOTuSVM-4aKE
+id: commerce_order.default.checkout
+targetEntityType: commerce_order
+bundle: default
+mode: checkout
+content:
+  field_comment_order:
+    type: string_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  adjustments: true
+  billing_profile: true
+  cart: true
+  created: true
+  ip_address: true
+  mail: true
+  order_items: true
+  order_number: true
+  state: true
+  store_id: true
+  uid: true

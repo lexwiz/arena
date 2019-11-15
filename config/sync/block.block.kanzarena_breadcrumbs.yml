@@ -1,0 +1,22 @@
+uuid: 0aeece1b-9c7f-42c2-98a7-9f9a3232ea0e
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kanzarena
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: kanzarena_breadcrumbs
+theme: kanzarena
+region: content
+weight: -11
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Строка навигации'
+  provider: system
+  label_display: '0'
+visibility: {  }

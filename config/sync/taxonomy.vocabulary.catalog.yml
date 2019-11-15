@@ -1,0 +1,8 @@
+uuid: 99acd930-eccc-4f98-ba40-bb00c3deded0
+langcode: ru
+status: true
+dependencies: {  }
+name: Каталог
+vid: catalog
+description: 'Разделы каталога'
+weight: 0

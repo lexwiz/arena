@@ -1,0 +1,8 @@
+uuid: 403dbdc1-95b4-410a-90eb-6d9db3e1d65b
+langcode: ru
+status: true
+dependencies: {  }
+id: _KyYVoP1pMRSEJD8cDQst9Nj-h1vo7ZVPnvdm5RCdy4
+label: 'http://kanzarena.localhost:8000'
+context:
+  language: ru

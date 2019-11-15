@@ -1,0 +1,22 @@
+uuid: 4d2f0e01-78a7-4e9d-8e01-47c69ff2a7f9
+langcode: ru
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - kanzarena
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: kanzarena_help
+theme: kanzarena
+region: help
+weight: -7
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Справка
+  provider: help
+  label_display: '0'
+visibility: {  }

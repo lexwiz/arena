@@ -1,0 +1,14 @@
+uuid: 452d1972-6e6a-41ee-bb20-6d5f41a32e09
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Обратная связь с сайтом'
+recipients:
+  - lexsaenko@yandex.ru
+reply: ''
+weight: 0
+message: 'Ваше сообщение отправлено.'
+redirect: ''

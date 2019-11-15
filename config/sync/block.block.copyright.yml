@@ -1,0 +1,25 @@
+uuid: 3515189d-7048-46cb-9ada-eae891b95420
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a36901ca-4186-43a6-a4dd-a3ac127a39a6'
+  module:
+    - block_content
+  theme:
+    - kanzarena
+id: copyright
+theme: kanzarena
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:a36901ca-4186-43a6-a4dd-a3ac127a39a6'
+settings:
+  id: 'block_content:a36901ca-4186-43a6-a4dd-a3ac127a39a6'
+  label: Copyright
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

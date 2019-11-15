@@ -1,0 +1,8 @@
+uuid: 42b76cc0-fb34-42ed-bae7-e6f00e25ed87
+langcode: ru
+status: true
+dependencies: {  }
+id: commerce_product
+label: Товар
+enabled: true
+types: {  }

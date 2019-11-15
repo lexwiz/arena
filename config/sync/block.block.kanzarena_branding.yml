@@ -1,0 +1,25 @@
+uuid: d87002f9-8d7d-4e6b-a2cd-ea09bbbbef46
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kanzarena
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: kanzarena_branding
+theme: kanzarena
+region: header
+weight: -10
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Брендинг сайта'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

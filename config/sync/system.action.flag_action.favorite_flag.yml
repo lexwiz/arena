@@ -1,0 +1,15 @@
+uuid: abf0598d-92d4-4c4b-bd1b-5cf30a98db43
+langcode: ru
+status: true
+dependencies:
+  config:
+    - flag.flag.favorite
+  module:
+    - flag
+id: flag_action.favorite_flag
+label: 'Flag this item'
+type: commerce_product
+plugin: 'flag_action:favorite_flag'
+configuration:
+  flag_id: favorite
+  flag_action: flag

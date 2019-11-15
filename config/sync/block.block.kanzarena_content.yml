@@ -1,0 +1,22 @@
+uuid: 935190c9-51d6-4204-927b-76435f4546a3
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kanzarena
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: kanzarena_content
+theme: kanzarena
+region: content
+weight: -7
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Содержимое страницы'
+  provider: system
+  label_display: '0'
+visibility: {  }

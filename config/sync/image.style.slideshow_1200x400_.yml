@@ -1,0 +1,15 @@
+uuid: 99c9feca-fd9e-4fa4-b431-47593c2c7122
+langcode: ru
+status: true
+dependencies: {  }
+name: slideshow_1200x400_
+label: 'Slideshow (1200x400)'
+effects:
+  dc2dc911-c5ee-4a00-82c2-b328ed918d4d:
+    uuid: dc2dc911-c5ee-4a00-82c2-b328ed918d4d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 400
+      anchor: center-center

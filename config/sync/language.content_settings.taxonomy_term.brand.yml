@@ -1,0 +1,11 @@
+uuid: 55a194de-ab20-4fa9-b9f1-9c1e86039a25
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.brand
+id: taxonomy_term.brand
+target_entity_type_id: taxonomy_term
+target_bundle: brand
+default_langcode: site_default
+language_alterable: false

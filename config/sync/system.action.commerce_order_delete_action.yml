@@ -1,0 +1,17 @@
+uuid: bdc99609-1615-464a-9211-c0f65e52bfad
+langcode: ru
+status: true
+dependencies:
+  enforced:
+    module:
+      - commerce_order
+  module:
+    - commerce_order
+    - entity
+_core:
+  default_config_hash: Wfu6EDwNNNV0FZiMAndYyWpKCyCZ2TfdZ2QkPUFOINY
+id: commerce_order_delete_action
+label: 'Удалить заказ'
+type: commerce_order
+plugin: 'entity_delete_action:commerce_order'
+configuration: {  }

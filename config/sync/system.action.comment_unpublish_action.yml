@@ -1,0 +1,13 @@
+uuid: f2d3ca2d-ff98-4ef3-be8b-780c945b9a14
+langcode: ru
+status: true
+dependencies:
+  module:
+    - comment
+_core:
+  default_config_hash: tWOIjSMobEWOFZddMkNqb9JySbOVwE1diC6NRqcfLTk
+id: comment_unpublish_action
+label: 'Снять с публикации комментарий'
+type: comment
+plugin: 'entity:unpublish_action:comment'
+configuration: {  }

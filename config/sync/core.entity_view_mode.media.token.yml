@@ -1,0 +1,10 @@
+uuid: 003972a6-1426-4938-85ef-eee8b90c94f8
+langcode: ru
+status: true
+dependencies:
+  module:
+    - media
+id: media.token
+label: Токен
+targetEntityType: media
+cache: true

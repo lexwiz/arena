@@ -1,0 +1,22 @@
+uuid: d57bafd5-7ec1-4d15-93e5-d706a56a56db
+langcode: ru
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - kanzarena
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: kanzarena_powered
+theme: kanzarena
+region: footer
+weight: -8
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Сделано на Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

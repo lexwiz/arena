@@ -1,0 +1,60 @@
+uuid: cddeacc6-86c9-4260-b735-2cf9f77cd359
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.default
+    - core.entity_view_mode.commerce_product_variation.summary
+    - field.field.commerce_product_variation.default.feeds_item
+    - field.field.commerce_product_variation.default.field_barcode
+    - field.field.commerce_product_variation.default.field_code_stock
+    - field.field.commerce_product_variation.default.field_sku_m
+    - field.field.commerce_product_variation.default.field_stock
+  enforced:
+    module:
+      - commerce_checkout
+  module:
+    - commerce_price
+_core:
+  default_config_hash: jmDRQILFIWJUS3jS-qLF10aGc1IXnvFEBizwJl94FfU
+id: commerce_product_variation.default.summary
+targetEntityType: commerce_product_variation
+bundle: default
+mode: summary
+content:
+  list_price:
+    label: above
+    type: commerce_price_default
+    weight: -1
+    region: content
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+  product_id:
+    type: entity_reference_label
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  feeds_item: true
+  field_barcode: true
+  field_code_stock: true
+  field_sku_m: true
+  field_stock: true
+  langcode: true
+  price: true
+  qty_increments: true
+  search_api_excerpt: true
+  sku: true

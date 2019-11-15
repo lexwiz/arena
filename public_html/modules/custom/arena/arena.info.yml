@@ -1,0 +1,5 @@
+name: Arena
+type: module
+description: 'Custom functions for Kanzarena shop'
+package: Custom
+core: 8.x

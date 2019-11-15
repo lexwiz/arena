@@ -1,0 +1,21 @@
+uuid: 66c0ab0a-13c9-49d6-9657-49f0c82ab7a9
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_requisites
+    - profile.type.customer
+id: profile.customer.field_requisites
+field_name: field_requisites
+entity_type: profile
+bundle: customer
+label: Реквизиты
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: нет
+default_value_callback: ''
+settings: {  }
+field_type: string_long

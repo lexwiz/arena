@@ -1,0 +1,6 @@
+types:
+  commerce_product_variation: commerce_product_variation
+  commerce_product: commerce_product
+_core:
+  default_config_hash: ybFcPjZje3mJVpuKZAJmoX9OXSZmM0NWrppkk8gaToo
+langcode: ru

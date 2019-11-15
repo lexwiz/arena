@@ -1,0 +1,19 @@
+uuid: ac5da776-198c-4975-8215-b483852365aa
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_type.default
+    - field.storage.commerce_order.field_comment_order
+id: commerce_order.default.field_comment_order
+field_name: field_comment_order
+entity_type: commerce_order
+bundle: default
+label: 'Комментарий к заказу'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

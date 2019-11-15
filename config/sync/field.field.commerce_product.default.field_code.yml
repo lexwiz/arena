@@ -1,0 +1,23 @@
+uuid: 333b5fb6-24b3-4111-843b-0c7c318db65a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.default
+    - field.storage.commerce_product.field_code
+id: commerce_product.default.field_code
+field_name: field_code
+entity_type: commerce_product
+bundle: default
+label: Код
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

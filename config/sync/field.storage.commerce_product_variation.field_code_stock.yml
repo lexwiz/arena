@@ -1,0 +1,25 @@
+uuid: 75683fd6-e251-421e-ab03-be59122a42ac
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - field_permissions
+third_party_settings:
+  field_permissions:
+    permission_type: private
+id: commerce_product_variation.field_code_stock
+field_name: field_code_stock
+entity_type: commerce_product_variation
+type: string
+settings:
+  max_length: 10
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

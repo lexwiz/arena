@@ -1,0 +1,54 @@
+uuid: 902a3528-1550-4643-8ea7-3aac1e7244c2
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_checkout_order_fields
+    - commerce_payment
+    - commerce_promotion
+_core:
+  default_config_hash: D34BCgbJ5zXYuNz6x0XsDBSL22XQjtHLbjJU2mlBvoA
+id: default
+label: Default
+plugin: multistep_default
+configuration:
+  display_checkout_progress: true
+  panes:
+    login:
+      allow_guest_checkout: true
+      allow_registration: false
+      step: login
+      weight: 0
+    contact_information:
+      double_entry: true
+      step: order_information
+      weight: 1
+    payment_information:
+      step: order_information
+      weight: 2
+    'order_fields:checkout':
+      wrapper_element: fieldset
+      display_label: 'Поля заказа'
+      step: order_information
+      weight: 3
+    review:
+      step: review
+      weight: 4
+    payment_process:
+      capture: true
+      step: payment
+      weight: 5
+    completion_message:
+      step: complete
+      weight: 6
+    completion_register:
+      step: complete
+      weight: 7
+    order_summary:
+      view: null
+      step: _sidebar
+      weight: 8
+    coupon_redemption:
+      allow_multiple: false
+      step: _sidebar
+      weight: 9

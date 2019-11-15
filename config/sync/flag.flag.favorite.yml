@@ -1,0 +1,29 @@
+uuid: e26559f1-4cb6-45e0-8274-26c594c41618
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: favorite
+label: Favorite
+bundles: {  }
+entity_type: commerce_product
+global: false
+weight: 0
+flag_short: '<span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> Избранное'
+flag_long: 'Добавить в Избранное'
+flag_message: ''
+unflag_short: '<span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Избранное'
+unflag_long: 'Удалить из Избранное'
+unflag_message: ''
+unflag_denied_text: ''
+flag_type: 'entity:commerce_product'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links: {  }
+  show_as_field: true
+  show_on_form: false
+  show_contextual_link: false
+  extra_permissions:
+    owner: '0'
+linkTypeConfig: {  }

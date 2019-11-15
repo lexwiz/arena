@@ -1,0 +1,10 @@
+uuid: f35702ef-87d6-4065-92bc-bfce164bf35e
+langcode: ru
+status: true
+dependencies:
+  module:
+    - flag
+id: flagging.token
+label: Токен
+targetEntityType: flagging
+cache: true

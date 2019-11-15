@@ -1,0 +1,25 @@
+uuid: 99c1d856-67f5-48a7-88d9-e740cf981c65
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.footer-menu-catalog
+  module:
+    - system
+  theme:
+    - kanzarena
+id: footermenucatalog
+theme: kanzarena
+region: footer_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-menu-catalog'
+settings:
+  id: 'system_menu_block:footer-menu-catalog'
+  label: 'Footer menu catalog'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,28 @@
+definitions:
+  contact__site_page:
+    weight: -47
+    menu_name: footer
+    parent: ''
+    enabled: true
+    expanded: false
+  user__page:
+    weight: -50
+    parent: 'menu_link_content:5a68edc7-828c-4f02-ac6b-8bf8f0f570aa'
+    menu_name: account
+    enabled: true
+    expanded: false
+  user__logout:
+    weight: -47
+    menu_name: account
+    parent: 'menu_link_content:5a68edc7-828c-4f02-ac6b-8bf8f0f570aa'
+    enabled: true
+    expanded: false
+  standard__front_page:
+    weight: 2
+    enabled: false
+    menu_name: main
+    parent: ''
+    expanded: false
+_core:
+  default_config_hash: o4bYR9ZupWb3AsOIizTUG4g-nu1mdJqA59UB7QT-ifQ
+langcode: ru

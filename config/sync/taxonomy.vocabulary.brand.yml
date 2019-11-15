@@ -1,0 +1,8 @@
+uuid: 27cadedc-d175-4fce-a0ce-1b19b7570c83
+langcode: ru
+status: true
+dependencies: {  }
+name: Бренд
+vid: brand
+description: 'Бренды товаров'
+weight: 0

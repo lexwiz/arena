@@ -1,0 +1,29 @@
+uuid: 0818c8ba-a19b-43ce-a15f-0bd23f249965
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: compare
+label: Compare
+bundles: {  }
+entity_type: commerce_product
+global: false
+weight: 0
+flag_short: '<span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Сравнить'
+flag_long: ''
+flag_message: ''
+unflag_short: '<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> Сравнить'
+unflag_long: ''
+unflag_message: ''
+unflag_denied_text: ''
+flag_type: 'entity:commerce_product'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links: {  }
+  show_as_field: true
+  show_on_form: false
+  show_contextual_link: false
+  extra_permissions:
+    owner: '0'
+linkTypeConfig: {  }

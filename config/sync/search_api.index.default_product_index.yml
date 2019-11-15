@@ -1,0 +1,91 @@
+uuid: 62e65a2f-3c6a-421a-89a0-0f0e6d039c67
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - search_api
+  config:
+    - field.storage.commerce_product.variations
+    - field.storage.commerce_product_variation.field_sku_m
+    - field.storage.commerce_product_variation.field_barcode
+    - field.storage.commerce_product.field_code
+    - search_api.server.default_server
+id: default_product_index
+name: 'Default product index'
+description: ''
+read_only: false
+field_settings:
+  field_barcode:
+    label: 'Вариации » Product variation » Штрихкод'
+    datasource_id: 'entity:commerce_product'
+    property_path: 'variations:entity:field_barcode'
+    type: text
+    dependencies:
+      config:
+        - field.storage.commerce_product.variations
+        - field.storage.commerce_product_variation.field_barcode
+      module:
+        - commerce_product
+  field_code:
+    label: Код
+    datasource_id: 'entity:commerce_product'
+    property_path: field_code
+    type: text
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_code
+  field_sku_m:
+    label: 'Вариации » Product variation » Артикул'
+    datasource_id: 'entity:commerce_product'
+    property_path: 'variations:entity:field_sku_m'
+    type: text
+    dependencies:
+      config:
+        - field.storage.commerce_product.variations
+        - field.storage.commerce_product_variation.field_sku_m
+      module:
+        - commerce_product
+  title:
+    label: Title
+    datasource_id: 'entity:commerce_product'
+    property_path: title
+    type: text
+    boost: !!float 8
+    dependencies:
+      module:
+        - commerce_product
+datasource_settings:
+  'entity:commerce_product':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  entity_status: {  }
+  ignorecase:
+    all_fields: false
+    fields:
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  rendered_item: {  }
+  transliteration:
+    all_fields: false
+    fields:
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: default_server

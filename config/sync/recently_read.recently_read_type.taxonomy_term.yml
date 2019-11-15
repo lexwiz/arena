@@ -1,0 +1,10 @@
+uuid: 12a4dec1-1501-4dae-bf06-6cc66b022da9
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Z6Cx68zVt61hNyrkMduYCpGig-hx7ExQYHc2f4xRiKA
+id: taxonomy_term
+label: Taxonomy
+enabled: false
+types: {  }

@@ -1,0 +1,14 @@
+uuid: 14f4a271-e63d-40b1-9918-5515b6051217
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: all_content
+label: 'All content'
+type: 'canonical_entities:node'
+pattern: 'content/[node:title]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

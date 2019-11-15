@@ -1,0 +1,52 @@
+uuid: d48cc5b0-c504-49c6-864d-31cd92dfa09c
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.profile.customer.address
+    - field.field.profile.customer.field_partner
+    - field.field.profile.customer.field_requisites
+    - field.field.profile.customer.field_telefon
+    - profile.type.customer
+  enforced:
+    module:
+      - commerce_order
+  module:
+    - address
+    - telephone
+_core:
+  default_config_hash: 7mnnVkJkUSPhil9xoiTfdTivMqxCUloT_71AHWNUbJg
+id: profile.customer.default
+targetEntityType: profile
+bundle: customer
+mode: default
+content:
+  address:
+    type: address_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_partner:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_requisites:
+    weight: 28
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_telefon:
+    weight: 26
+    settings:
+      placeholder: '+7 (978) 123 45 67'
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+hidden:
+  is_default: true

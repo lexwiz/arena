@@ -1,0 +1,30 @@
+uuid: a15a488d-41d2-44e6-92da-17191a3e692c
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
+id: authenticated
+label: 'Аутентифицированный пользователь'
+weight: 1
+is_admin: false
+permissions:
+  - 'access checkout'
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'display eu cookie compliance popup'
+  - 'flag favorite'
+  - 'manage own commerce_payment_method'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'subscribe to newsletters'
+  - 'unflag favorite'
+  - 'use search_api_autocomplete for product_search'
+  - 'use search_api_autocomplete for search_content'
+  - 'use text format basic_html'
+  - 'view commerce_product'
+  - 'view media'
+  - 'view own commerce_order'

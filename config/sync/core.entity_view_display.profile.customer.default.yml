@@ -1,0 +1,55 @@
+uuid: f58818bb-e262-4561-9f6a-a84aee119b8c
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.profile.customer.address
+    - field.field.profile.customer.field_partner
+    - field.field.profile.customer.field_requisites
+    - field.field.profile.customer.field_telefon
+    - profile.type.customer
+  enforced:
+    module:
+      - commerce_order
+  module:
+    - address
+    - options
+    - telephone
+_core:
+  default_config_hash: zA0MBGUGdWqnBBoC762uDcH92qRZHC8KllbkpOjNUcs
+id: profile.customer.default
+targetEntityType: profile
+bundle: customer
+mode: default
+content:
+  address:
+    type: address_default
+    weight: 0
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_partner:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_requisites:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_telefon:
+    weight: 1
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+hidden:
+  search_api_excerpt: true

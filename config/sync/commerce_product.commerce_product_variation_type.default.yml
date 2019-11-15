@@ -1,0 +1,12 @@
+uuid: 8fa28f57-b90f-45bc-952c-3385a6ddfc34
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 3vA4FKQ1Qu8B1R8UdGPnmMfJrYO6Y6uMqeNgDgXxods
+id: default
+label: Default
+orderItemType: default
+generateTitle: true
+traits: {  }
+locked: false

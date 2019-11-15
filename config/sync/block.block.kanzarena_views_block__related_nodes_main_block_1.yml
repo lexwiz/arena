@@ -1,0 +1,25 @@
+uuid: bede0234-9348-4dd5-b46e-1cf4497d596d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.related_nodes_main
+  module:
+    - views
+  theme:
+    - kanzarena
+id: kanzarena_views_block__related_nodes_main_block_1
+theme: kanzarena
+region: content
+weight: -6
+provider: null
+plugin: 'views_block:related_nodes_main-block_1'
+settings:
+  id: 'views_block:related_nodes_main-block_1'
+  label: 'Похожие материалы'
+  provider: views
+  label_display: visible
+  views_label: 'Похожие материалы'
+  items_per_page: '1'
+  context_mapping: {  }
+visibility: {  }

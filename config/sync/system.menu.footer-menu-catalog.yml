@@ -1,0 +1,8 @@
+uuid: e81d2f09-ade8-4049-b774-f32c669a687c
+langcode: ru
+status: true
+dependencies: {  }
+id: footer-menu-catalog
+label: 'Footer menu catalog'
+description: ''
+locked: false
