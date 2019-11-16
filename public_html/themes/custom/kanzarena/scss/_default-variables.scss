@@ -1,0 +1,55 @@
+/**
+ * Default Variables.
+ *
+ * Modify this file to provide default Bootstrap Framework variables. The
+ * Bootstrap Framework will not override any variables defined here because it
+ * uses the `!default` flag which will only set their default if not already
+ * defined here.
+ *
+ * You can copy existing variables directly from the following file:
+ * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
+ */
+
+// Set the directory for the theme root used to locate images, fonts etc.
+$theme-root: '..';
+
+// Set other directories relative to theme root.
+$image-path: '#{$theme-root}/images';
+$icon-font-path: '#{$theme-root}/bootstrap/assets/fonts/bootstrap/';
+
+//$body-bg:               #f4f6f8 !default; //
+$border-radius-base:        0 !default;
+
+$brand-primary:         #ff5f0d !default; // #28313b
+
+//** Global textual link color.
+//$link-color:            darken($brand-primary, 15%) !default;
+//** Link hover color set via `darken()` function.
+//$link-hover-color:      #28313b !default;
+//** Link hover decoration.
+//$link-hover-decoration: none !default;
+
+//$nav-link-hover-bg:                         lighten($brand-primary, 20%) !default;
+
+//== Wells
+//
+//##
+
+//$well-bg:                     #fff !default;
+//$well-border:                 darken($well-bg, 10%) !default;
+
+//== Carousel
+//
+//##
+
+$carousel-text-shadow:                        0 1px 2px rgba(0, 0, 0, .6) !default;
+
+$carousel-control-color:                      $brand-primary !default;
+$carousel-control-width:                      6% !default;
+$carousel-control-opacity:                    .5 !default;
+$carousel-control-font-size:                  20px !default;
+
+$carousel-indicator-active-bg:                $brand-primary !default;
+$carousel-indicator-border-color:             $brand-primary !default;
+
+$carousel-caption-color:                      #fff !default;

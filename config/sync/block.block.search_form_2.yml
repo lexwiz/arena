@@ -1,0 +1,27 @@
+uuid: 9d7995b6-32ae-4935-aa7c-56a4384c9278
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.product_search
+  module:
+    - block_class
+    - views
+  theme:
+    - kanzarena
+third_party_settings:
+  block_class:
+    classes: 'col-xs-12 col-sm-6 col-md-6 hidden-lg'
+id: search_form_2
+theme: kanzarena
+region: header_page
+weight: -12
+provider: null
+plugin: 'views_exposed_filter_block:product_search-page_1'
+settings:
+  id: 'views_exposed_filter_block:product_search-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility: {  }

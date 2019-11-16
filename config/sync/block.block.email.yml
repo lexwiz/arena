@@ -11,11 +11,11 @@ dependencies:
     - kanzarena
 third_party_settings:
   block_class:
-    classes: 'col-xs-12 col-sm-12 col-md-3 col-lg-3'
+    classes: 'col-xs-6 col-sm-4 col-md-4 col-lg-3'
 id: email
 theme: kanzarena
-region: header
-weight: -8
+region: header_page
+weight: -10
 provider: null
 plugin: 'block_content:f64b4c0e-b4ea-46e7-9a46-be1858c370b0'
 settings:

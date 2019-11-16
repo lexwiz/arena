@@ -9,8 +9,8 @@ dependencies:
     - kanzarena
 id: progressoformleniya
 theme: kanzarena
-region: highlighted
-weight: -9
+region: content
+weight: -12
 provider: null
 plugin: commerce_checkout_progress
 settings:

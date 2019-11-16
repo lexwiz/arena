@@ -11,11 +11,11 @@ dependencies:
     - kanzarena
 third_party_settings:
   block_class:
-    classes: 'col-xs-12 col-sm-12 col-md-2 col-lg-2'
+    classes: 'col-xs-6 col-sm-4 col-md-4 col-lg-2'
 id: telefon
 theme: kanzarena
-region: header
-weight: -9
+region: header_page
+weight: -11
 provider: null
 plugin: 'block_content:f204ead4-ae26-4bc8-9770-18b2a6408a75'
 settings:

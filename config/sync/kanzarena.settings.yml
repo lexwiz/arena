@@ -13,6 +13,7 @@ table_responsive: '-1'
 region_wells:
   navigation: ''
   navigation_collapsible: ''
+  header_page: ''
   header: ''
   highlighted: ''
   help: ''
@@ -35,12 +36,11 @@ logo:
   path: 'public://KanzArena Logo.png'
   url: ''
   use_default: false
-navbar_position: fixed-top
 breadcrumb_home: 1
-navbar_inverse: 0
 features:
   comment_user_picture: true
   comment_user_verification: true
   favicon: true
   node_user_picture: true
+navbar_position: fixed-top
 langcode: ru

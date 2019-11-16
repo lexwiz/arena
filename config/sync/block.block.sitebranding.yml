@@ -1,0 +1,23 @@
+uuid: 6f900b06-a54b-4d45-8300-f0eccd706a6b
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kanzarena
+id: sitebranding
+theme: kanzarena
+region: navigation
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

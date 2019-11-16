@@ -11,7 +11,7 @@ dependencies:
 id: kanzarena_views_block__related_nodes_main_block_1
 theme: kanzarena
 region: content
-weight: -6
+weight: -7
 provider: null
 plugin: 'views_block:related_nodes_main-block_1'
 settings:

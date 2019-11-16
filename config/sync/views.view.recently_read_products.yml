@@ -55,7 +55,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 10
+          items_per_page: 8
           offset: 0
       style:
         type: views_bootstrap_grid
@@ -64,9 +64,9 @@ display:
           row_class: 'well text-center'
           default_row_class: true
           alignment: horizontal
-          columns: '1'
-          col_xs: col-xs-12
-          col_sm: col-sm-12
+          columns: '4'
+          col_xs: col-xs-6
+          col_sm: col-sm-6
           col_md: col-md-12
           col_lg: col-lg-12
       row:

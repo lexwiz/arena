@@ -11,7 +11,7 @@
 function arena_form_commerce_order_item_add_to_cart_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   //dpm($form_state);
   //$form['submit']['#value'] = '<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> '.t("Buy");
-  //$form['#attributes']['class'][] ='form-inline';
+  $form['#attributes']['class'][] ='form-inline';
   //$test = $form_state->getBuildInfo();
   //echo $test;
 }
@@ -45,7 +45,7 @@ function arena_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormState
     //dpm($form_state);
 if ($form['#id'] == 'views-exposed-form-product-search-page-1') {
     
-    $form['keys']['#size'] = 14;  // define size of the textfield
+    $form['keys']['#size'] = 12;  // define size of the textfield
    
     //$form['#attributes']['class'][] ='navbar-form navbar-center';
 
