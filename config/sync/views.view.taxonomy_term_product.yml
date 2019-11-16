@@ -135,13 +135,13 @@ display:
       style:
         type: views_bootstrap_grid
         options:
+          grouping: {  }
           row_class: 'well text-center'
           default_row_class: true
-          uses_fields: false
           alignment: horizontal
           columns: '4'
           col_xs: col-xs-12
-          col_sm: col-sm-12
+          col_sm: col-sm-6
           col_md: col-md-6
           col_lg: col-lg-3
       row:
