@@ -6587,6 +6587,7 @@ body.navbar-is-fixed-top {
 .field--name-quantity .control-label {
   display: none; }
 
+.block-field-blockcommerce-productdefaulttitle .field--name-title,
 h2.title-product {
   font-size: 12px;
   font-weight: bold;
@@ -6695,6 +6696,11 @@ a.tid-1697 {
   right: 0;
   top: 53px; }
 
+@media (min-width: 360px) {
+  .cart-block--contents {
+    width: 340px;
+    right: 0;
+    top: 53px; } }
 @media (min-width: 768px) {
   .cart-block--contents {
     width: 700px;

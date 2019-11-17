@@ -81,6 +81,7 @@ body.navbar-is-fixed-top {
     //width: 100%;
 }
 
+.block-field-blockcommerce-productdefaulttitle .field--name-title,
 h2.title-product {
     font-size: 12px;
     font-weight: bold;
@@ -210,6 +211,14 @@ a.tid-1697 {
     width: 450px;
     right: 0;
     top: 53px;
+}
+
+@media (min-width: $screen-xs-min) {
+    .cart-block--contents {
+    width: 340px;
+    right: 0;
+    top: 53px;
+}
 }
 
 @media (min-width: $screen-sm-min) {

@@ -1,0 +1,74 @@
+uuid: 1b28af7c-6502-48b4-b448-8350ffd4c539
+langcode: ru
+status: true
+dependencies:
+  module:
+    - user
+label: Users
+id: users
+description: ''
+help: ''
+import_period: -1
+fetcher: directory
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  allowed_schemes:
+    public: public
+  recursive_scan: false
+parser: csv
+parser_configuration:
+  delimiter: ;
+  no_headers: false
+  line_limit: 100
+processor: 'entity:user'
+processor_configuration:
+  update_existing: 0
+  update_non_existent: _keep
+  expire: -1
+  skip_hash_check: false
+  owner_id: 0
+  values: {  }
+  authorize: false
+  owner_feed_author: false
+custom_sources:
+  e_mail:
+    label: E-mail
+    value: E-mail
+    machine_name: e_mail
+  data_sozdaniya:
+    label: 'Дата создания'
+    value: 'Дата создания'
+    machine_name: data_sozdaniya
+  name:
+    label: Name
+    value: Name
+    machine_name: name
+  aktivnyy_status:
+    label: 'Активный статус'
+    value: 'Активный статус'
+    machine_name: aktivnyy_status
+mappings:
+  -
+    target: mail
+    map:
+      value: e_mail
+    unique:
+      value: '1'
+    settings:
+      defuse: 0
+  -
+    target: name
+    map:
+      value: name
+    unique: {  }
+  -
+    target: init
+    map:
+      value: e_mail
+    unique: {  }
+    settings:
+      defuse: false
+  -
+    target: status
+    map:
+      value: aktivnyy_status

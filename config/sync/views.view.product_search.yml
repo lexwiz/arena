@@ -77,7 +77,7 @@ display:
           alignment: horizontal
           columns: '4'
           col_xs: col-xs-12
-          col_sm: col-sm-12
+          col_sm: col-sm-6
           col_md: col-md-6
           col_lg: col-lg-3
       row:
@@ -311,6 +311,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      css_class: col-sm-12
     cache_metadata:
       max-age: -1
       contexts:

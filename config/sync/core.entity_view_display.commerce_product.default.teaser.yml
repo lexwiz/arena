@@ -13,6 +13,7 @@ dependencies:
     - field.field.commerce_product.default.field_country
     - field.field.commerce_product.default.field_package
     - field.field.commerce_product.default.field_photo
+    - field.field.commerce_product.default.field_property
     - field.field.commerce_product.default.field_tags
     - field.field.commerce_product.default.stores
     - field.field.commerce_product.default.variations
@@ -46,7 +47,7 @@ third_party_settings:
                   link_to_entity: true
                 third_party_settings: {  }
             additional: {  }
-            weight: 0
+            weight: -10
           fad75317-4ea2-4027-bb4a-31362579eb2e:
             uuid: fad75317-4ea2-4027-bb4a-31362579eb2e
             region: content
@@ -65,7 +66,7 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 1
+            weight: -9
           3912b2e9-00b1-454c-8f3e-bdf71c420b97:
             uuid: 3912b2e9-00b1-454c-8f3e-bdf71c420b97
             region: content
@@ -82,7 +83,7 @@ third_party_settings:
                   prefix_suffix: true
                 third_party_settings: {  }
             additional: {  }
-            weight: 4
+            weight: -7
           bbd1cb43-cf3e-4529-98d6-d950fbec50c5:
             uuid: bbd1cb43-cf3e-4529-98d6-d950fbec50c5
             region: content
@@ -98,17 +99,7 @@ third_party_settings:
                   combine: true
                 third_party_settings: {  }
             additional: {  }
-            weight: 6
-          88db9cf8-3c93-47db-bd96-0dd2b1c3299b:
-            uuid: 88db9cf8-3c93-47db-bd96-0dd2b1c3299b
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:commerce_product:default:flag_favorite'
-            additional: {  }
-            weight: 3
+            weight: -5
           863c588f-6ef2-428c-90a9-537beb71899f:
             uuid: 863c588f-6ef2-428c-90a9-537beb71899f
             region: content
@@ -126,7 +117,7 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 5
+            weight: -6
           21e6b957-40b9-4595-a27a-8db9d4f52a52:
             uuid: 21e6b957-40b9-4595-a27a-8db9d4f52a52
             region: content
@@ -144,7 +135,7 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 2
+            weight: -8
         third_party_settings: {  }
 _core:
   default_config_hash: myRJTydBT2SLWlJfUQN9ySCpYsacPYRjT8b8Oa7n1bo
@@ -171,6 +162,11 @@ content:
       image_style: medium
       image_link: content
     third_party_settings: {  }
+  flag_compare:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   flag_favorite:
     weight: 10
     settings: {  }
@@ -200,6 +196,7 @@ hidden:
   field_catalog: true
   field_country: true
   field_package: true
+  field_property: true
   field_tags: true
   langcode: true
   search_api_excerpt: true
