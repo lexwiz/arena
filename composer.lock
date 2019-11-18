@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "410aada875dea0e7b8750273d5522f1e",
+    "content-hash": "01b3b69f0267abb5d7a423201bfeb982",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2364,6 +2364,57 @@
                 "source": "http://cgit.drupalcode.org/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
             }
+        },
+        {
+            "name": "drupal/ajax_add_to_cart",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ajax_add_to_cart.git",
+                "reference": "01c7eb55d95d18941f9478545b30feb4e1ca8ff5"
+            },
+            "require": {
+                "drupal/commerce": "~2.0",
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0+9-dev",
+                    "datestamp": "1564827784",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Shamsher_Alam",
+                    "homepage": "https://www.drupal.org/user/2742027"
+                },
+                {
+                    "name": "pen",
+                    "homepage": "https://www.drupal.org/user/2435634"
+                }
+            ],
+            "description": "Add ajax add to cart functionality.",
+            "homepage": "https://www.drupal.org/project/ajax_add_to_cart",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/ajax_add_to_cart",
+                "issues": "https://www.drupal.org/project/issues/ajax_add_to_cart"
+            },
+            "time": "2019-08-07T16:59:22+00:00"
         },
         {
             "name": "drupal/better_exposed_filters",
@@ -12819,6 +12870,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/ajax_add_to_cart": 20,
         "drupal/block_class": 20,
         "drupal/bootstrap_basic_image_gallery": 20,
         "drupal/bootstrap_layouts": 20,

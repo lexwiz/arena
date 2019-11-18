@@ -8,13 +8,13 @@
 /**
  * Implements hook_form_FORM_ID_alter().
  */
-function arena_form_commerce_order_item_add_to_cart_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+//function arena_form_commerce_order_item_add_to_cart_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   //dpm($form_state);
   //$form['submit']['#value'] = '<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> '.t("Buy");
-  $form['#attributes']['class'][] ='form-inline';
+  //$form['#attributes']['class'][] ='form-inline';
   //$test = $form_state->getBuildInfo();
   //echo $test;
-}
+//}
 
 function arena_form_user_register_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   //dpm($form_state);

@@ -100,7 +100,7 @@ h2.title-product {
 }
 
 .field--name-quantity .form-inline .form-control {
-    width: 10em;
+    width: 6em;
 }
 
 .views-field-field-photo,
@@ -313,4 +313,9 @@ h2.block-title {
       border-color: $link-color;
     }
   }
+}
+
+#drupal-modal--body.modal-body {
+    overflow: auto;
+
 }

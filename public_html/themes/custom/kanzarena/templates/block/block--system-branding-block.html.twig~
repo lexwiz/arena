@@ -17,7 +17,7 @@
 #}
 {% block content %}
   {% if site_logo %}
-    <a class="logo navbar-btn pull-left hidden-xs col-sm-6 col-md-4 col-lg-4" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+    <a class="logo navbar-btn pull-left hidden-xs col-sm-6 col-md-6 col-lg-4" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
       <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
     </a>
   {% endif %}

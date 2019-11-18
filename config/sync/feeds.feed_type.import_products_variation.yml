@@ -7,7 +7,6 @@ dependencies:
     - field.field.commerce_product_variation.default.field_barcode
     - field.field.commerce_product_variation.default.field_code_stock
     - field.field.commerce_product_variation.default.field_sku_m
-    - field.field.commerce_product_variation.default.field_stock
   module:
     - commerce_feeds
     - commerce_product
@@ -136,7 +135,3 @@ mappings:
     target: qty_increments
     map:
       value: min_qt
-  -
-    target: field_stock
-    map:
-      value: stock

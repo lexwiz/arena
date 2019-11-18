@@ -6533,6 +6533,9 @@ p:last-child,
   .help-block:first-child, .control-group .help-inline:first-child {
     margin-top: 0; }
 
+.modal {
+  top: 30%; }
+
 body.navbar-is-fixed-top {
   margin-top: 60px; }
 
@@ -6604,7 +6607,7 @@ h2.title-product {
   padding: 20px 0 15px; }
 
 .field--name-quantity .form-inline .form-control {
-  width: 10em; }
+  width: 6em; }
 
 .views-field-field-photo,
 .field--name-field-photo {
@@ -6765,5 +6768,8 @@ h2.block-title {
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
   background-color: #ff5f0d;
   border-color: #ff5f0d; }
+
+#drupal-modal--body.modal-body {
+  overflow: auto; }
 
 /*# sourceMappingURL=style.css.map */

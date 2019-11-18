@@ -134,7 +134,7 @@
         set content_classes = [
           page.sidebar_first and page.sidebar_second ? 'col-sm-6',
           page.sidebar_first and page.sidebar_second is empty ? 'col-sm-9',
-          page.sidebar_second and page.sidebar_first is empty ? 'col-sm-12 col-md-8',
+          page.sidebar_second and page.sidebar_first is empty ? 'col-sm-12 col-md-9',
           page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12'
         ]
       %}
@@ -164,7 +164,7 @@
       {# Sidebar Second #}
       {% if page.sidebar_second %}
         {% block sidebar_second %}
-          <aside class="col-sm-12 col-md-4" role="complementary">
+          <aside class="col-sm-12 col-md-3" role="complementary">
             {{ page.sidebar_second }}
           </aside>
         {% endblock %}
@@ -202,3 +202,16 @@
     </footer>
   {% endblock %}
 {% endif %}
+
+<div id="add-to-cart-overlay" class="reveal" data-reveal data-close-on-click="false">
+  <p><span class="purchased-entity"></span> wurde Ihrem Warenkorb hinzugefügt.</p>
+  <div>
+    <a class="button" href="{{ path('commerce_cart.page') }}">zum Warenkorb</a><br/>
+    <a href="#" data-close>Weiter einkaufen</a>
+  </div>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+
