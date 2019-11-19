@@ -7,13 +7,13 @@ _core:
 name: 'Default newsletter'
 id: default
 description: 'This is an example newsletter. Change it.'
-format: plain
-priority: 0
+format: html
+priority: 3
 receipt: true
 from_name: KanzArena
 subject: '[[simplenews-newsletter:name]] [node:title]'
 from_address: lexsaenko@yandex.ru
 hyperlinks: false
-new_account: none
+new_account: 'on'
 opt_inout: double
 weight: 0
