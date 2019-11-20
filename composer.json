@@ -55,6 +55,7 @@
         "drupal/redirect": "^1.4",
         "drupal/search_api": "^1.12",
         "drupal/search_api_autocomplete": "^1.2",
+        "drupal/selective_better_exposed_filters": "^1.0@beta",
         "drupal/simplenews": "^1.0",
         "drupal/spamspan": "^1.0",
         "drupal/super_login": "1.x-dev",
