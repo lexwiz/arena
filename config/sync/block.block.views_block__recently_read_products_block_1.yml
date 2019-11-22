@@ -1,4 +1,4 @@
-uuid: 5cccc55c-5c94-45b0-8a0a-c5dbfdb57754
+uuid: b96ec323-0eee-4ffa-947f-440be29a1648
 langcode: ru
 status: true
 dependencies:
@@ -9,22 +9,22 @@ dependencies:
     - views
   theme:
     - kanzarena
-id: kanzarena_views_block__recently_read_products_block_1
+id: views_block__recently_read_products_block_1
 theme: kanzarena
 region: sidebar_second
-weight: -7
+weight: 0
 provider: null
 plugin: 'views_block:recently_read_products-block_1'
 settings:
   id: 'views_block:recently_read_products-block_1'
-  label: 'Вы смотрели'
+  label: ''
   provider: views
   label_display: visible
-  views_label: 'Вы смотрели'
-  items_per_page: '10'
+  views_label: ''
+  items_per_page: none
 visibility:
   request_path:
     id: request_path
-    pages: "/product/*\r\n/product\r\n"
+    pages: '/product/*'
     negate: false
     context_mapping: {  }

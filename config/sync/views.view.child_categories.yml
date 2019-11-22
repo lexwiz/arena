@@ -58,22 +58,19 @@ display:
       style:
         type: views_bootstrap_grid
         options:
-          grouping: {  }
           row_class: 'thumbnail text-center'
           default_row_class: true
+          uses_fields: false
           alignment: horizontal
-          columns: '4'
+          columns: '6'
           col_xs: col-xs-12
           col_sm: col-sm-6
           col_md: col-md-3
-          col_lg: col-lg-3
+          col_lg: col-lg-2
       row:
-        type: fields
+        type: 'entity:taxonomy_term'
         options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
+          view_mode: default
       fields:
         field_media_term:
           id: field_media_term

@@ -331,7 +331,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: catalog
+      path: catalog-main
       menu:
         type: normal
         title: Каталог

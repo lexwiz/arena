@@ -20,13 +20,8 @@ dependencies:
     - image.style.large
   module:
     - commerce_product
-    - layout_builder
     - media
     - text
-third_party_settings:
-  layout_builder:
-    allow_custom: false
-    enabled: false
 _core:
   default_config_hash: myRJTydBT2SLWlJfUQN9ySCpYsacPYRjT8b8Oa7n1bo
 id: commerce_product.default.token
@@ -105,6 +100,11 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  flag_compare:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
     region: content
   flag_favorite:
     weight: 10

@@ -27,7 +27,7 @@ services:
       PHP_FPM_USER: wodby
       PHP_FPM_GROUP: wodby
       COLUMNS: 80 # Set 80 columns for docker exec -it.
-      PHP_XHPROF: 1
+#      PHP_XHPROF: 1
 ## Read instructions at https://wodby.com/stacks/drupal/docs/local/xdebug/
 #      PHP_XDEBUG: 1
 #      PHP_XDEBUG_DEFAULT_ENABLE: 1
@@ -38,6 +38,7 @@ services:
 #      PHP_XDEBUG_REMOTE_HOST: 10.254.254.254 # macOS, Docker < 18.03
 #      PHP_XDEBUG_REMOTE_HOST: 10.0.75.1 # Windows, Docker < 18.03
 #      PHP_XDEBUG_REMOTE_LOG: /tmp/php-xdebug.log
+      PHP_BLACKFIRE: 1
     volumes:
       - ./:/var/www/html
 ## For macOS users (https://wodby.com/stacks/drupal/docs/local/docker-for-mac/)
@@ -179,9 +180,9 @@ services:
 #      - ./path/to/your/single-page-app:/app
 #    command: sh -c 'npm install && npm run start'
 
-  memcached:
-    container_name: "${PROJECT_NAME}_memcached"
-    image: wodby/memcached:$MEMCACHED_TAG
+#  memcached:
+#    container_name: "${PROJECT_NAME}_memcached"
+#    image: wodby/memcached:$MEMCACHED_TAG
 
 #  rsyslog:
 #    container_name: "${PROJECT_NAME}_rsyslog"
@@ -212,12 +213,12 @@ services:
 #      - ./:/var/www/html
 #    command: sh -c 'yarn install && yarn run start'
 
-#  blackfire:
-#    image: blackfire/blackfire
-#    container_name: "${PROJECT_NAME}_blackfire"
-#    environment:
-#      BLACKFIRE_SERVER_ID: XXXXX
-#      BLACKFIRE_SERVER_TOKEN: YYYYY
+  blackfire:
+    image: blackfire/blackfire
+    container_name: "${PROJECT_NAME}_blackfire"
+    environment:
+      BLACKFIRE_SERVER_ID: 60497c5f-5346-48d0-9514-3b3810749597
+      BLACKFIRE_SERVER_TOKEN: 0a45bb3e35032116a321d0859b0cce95737fb50924244c41630be52757e091aa
 
 #  webgrind:
 #    image: wodby/webgrind:$WEBGRIND_TAG
@@ -253,15 +254,15 @@ services:
 #    container_name: "${PROJECT_NAME}_opensmtpd"
 #    image: wodby/opensmtpd:$OPENSMTPD_TAG
 
-  xhprof:
-    image: wodby/xhprof:$XHPROF_TAG
-    restart: always
-    volumes:
-      - ../files:/mnt/files
-    labels:
-      - 'traefik.backend=${PROJECT_NAME}_xhprof'
-      - 'traefik.port=8080'
-      - 'traefik.frontend.rule=Host:xhprof.${PROJECT_BASE_URL}'
+#  xhprof:
+#    image: wodby/xhprof:$XHPROF_TAG
+#    restart: always
+#    volumes:
+#      - ../files:/mnt/files
+#    labels:
+#      - 'traefik.backend=${PROJECT_NAME}_xhprof'
+#      - 'traefik.port=8080'
+#      - 'traefik.frontend.rule=Host:xhprof.${PROJECT_BASE_URL}'
 
   portainer:
     image: portainer/portainer

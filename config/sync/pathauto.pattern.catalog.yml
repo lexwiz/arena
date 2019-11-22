@@ -10,14 +10,14 @@ label: Catalog
 type: 'canonical_entities:taxonomy_term'
 pattern: 'catalog/[term:name]'
 selection_criteria:
-  7a0b1a26-7e97-4454-a685-c7dda7f34ba9:
+  1bcd5d93-e4d2-4756-a875-c595f1652ca0:
     id: 'entity_bundle:taxonomy_term'
     bundles:
       catalog: catalog
     negate: false
     context_mapping:
       taxonomy_term: taxonomy_term
-    uuid: 7a0b1a26-7e97-4454-a685-c7dda7f34ba9
+    uuid: 1bcd5d93-e4d2-4756-a875-c595f1652ca0
 selection_logic: and
 weight: -5
 relationships: {  }

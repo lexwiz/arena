@@ -1,4 +1,4 @@
-delete_config: never
+delete_config: count
 plugins:
   user: user
   node: node
@@ -8,4 +8,4 @@ _core:
   default_config_hash: nv-s9aKm1RBBpsvmRmlK_jChwlthIHetdhtzBYZoyCs
 langcode: ru
 delete_time: '-1 hours'
-count: ''
+count: '20'
