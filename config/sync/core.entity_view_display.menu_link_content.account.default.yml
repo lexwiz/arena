@@ -2,15 +2,8 @@ uuid: 2e605d4e-75b0-44b2-8801-b15bc37cc62d
 langcode: ru
 status: true
 dependencies:
-  config:
-    - system.menu.account
   module:
-    - layout_builder
-    - layout_discovery
-third_party_settings:
-  layout_builder:
-    allow_custom: false
-    enabled: false
+    - menu_link_content
 id: menu_link_content.account.default
 targetEntityType: menu_link_content
 bundle: account

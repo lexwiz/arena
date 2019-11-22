@@ -2,15 +2,16 @@ uuid: 62e65a2f-3c6a-421a-89a0-0f0e6d039c67
 langcode: ru
 status: true
 dependencies:
+  config:
+    - field.storage.commerce_product.variations
+    - field.storage.commerce_product_variation.field_barcode
+    - field.storage.commerce_product.field_code
+    - field.storage.commerce_product_variation.field_sku_m
+    - field.storage.commerce_product_variation.field_stock
+    - search_api.server.default_server
   module:
     - commerce_product
     - search_api
-  config:
-    - field.storage.commerce_product.variations
-    - field.storage.commerce_product_variation.field_sku_m
-    - field.storage.commerce_product_variation.field_barcode
-    - field.storage.commerce_product.field_code
-    - search_api.server.default_server
 id: default_product_index
 name: 'Default product index'
 description: ''
@@ -46,6 +47,17 @@ field_settings:
         - field.storage.commerce_product_variation.field_sku_m
       module:
         - commerce_product
+  field_stock:
+    label: 'Вариации » Product variation » Stock'
+    datasource_id: 'entity:commerce_product'
+    property_path: 'variations:entity:field_stock'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.variations
+        - field.storage.commerce_product_variation.field_stock
+      module:
+        - commerce_product
   title:
     label: Title
     datasource_id: 'entity:commerce_product'
@@ -67,6 +79,24 @@ processor_settings:
   add_url: {  }
   aggregated_field: {  }
   entity_status: {  }
+  html_filter:
+    all_fields: false
+    fields:
+      - field_barcode
+      - field_code
+      - field_sku_m
+      - title
+    title: true
+    alt: true
+    tags:
+      b: 2
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+    weights:
+      preprocess_index: -15
+      preprocess_query: -15
   ignorecase:
     all_fields: false
     fields:
@@ -74,6 +104,7 @@ processor_settings:
     weights:
       preprocess_index: -20
       preprocess_query: -20
+  language_with_fallback: {  }
   rendered_item: {  }
   transliteration:
     all_fields: false

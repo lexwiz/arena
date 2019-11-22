@@ -3,6 +3,7 @@ langcode: ru
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.commerce_product.teaser
     - field.storage.commerce_product.field_code
     - field.storage.commerce_product.field_photo
     - field.storage.commerce_product.field_tags
@@ -60,9 +61,9 @@ display:
       style:
         type: views_bootstrap_grid
         options:
-          grouping: {  }
-          row_class: 'well text-center'
-          default_row_class: true
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
           alignment: horizontal
           columns: '4'
           col_xs: col-xs-6
@@ -70,7 +71,10 @@ display:
           col_md: col-md-12
           col_lg: col-lg-12
       row:
-        type: fields
+        type: 'entity:commerce_product'
+        options:
+          relationship: none
+          view_mode: teaser
       fields:
         title:
           id: title

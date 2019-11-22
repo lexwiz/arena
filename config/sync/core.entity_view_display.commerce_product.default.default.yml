@@ -16,247 +16,9 @@ dependencies:
     - field.field.commerce_product.default.field_tags
     - field.field.commerce_product.default.stores
     - field.field.commerce_product.default.variations
-    - image.style.large
   module:
-    - bootstrap_layouts
     - commerce_product
-    - layout_builder
-    - media
     - text
-third_party_settings:
-  layout_builder:
-    allow_custom: false
-    enabled: true
-    sections:
-      -
-        layout_id: bs_2col_stacked
-        layout_settings:
-          layout:
-            wrapper: div
-            classes:
-              row: row
-            add_layout_class: 1
-            attributes: ''
-          regions:
-            top:
-              wrapper: div
-              classes:
-                col-sm-12: col-sm-12
-              add_region_classes: 1
-              attributes: ''
-            left:
-              wrapper: div
-              classes:
-                col-sm-6: col-sm-6
-              add_region_classes: 1
-              attributes: ''
-            right:
-              wrapper: div
-              classes:
-                col-sm-6: col-sm-6
-              add_region_classes: 1
-              attributes: ''
-            bottom:
-              wrapper: div
-              classes:
-                col-sm-12: col-sm-12
-              add_region_classes: 1
-              attributes: ''
-        components:
-          c53d9184-0902-4eb4-a300-d735e6d6aa80:
-            uuid: c53d9184-0902-4eb4-a300-d735e6d6aa80
-            region: left
-            configuration:
-              id: 'field_block:commerce_product:default:field_photo'
-              label: Photo
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: default
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 2
-          b33eb3e3-11cf-41fa-bca0-c2a9bdff9108:
-            uuid: b33eb3e3-11cf-41fa-bca0-c2a9bdff9108
-            region: left
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:commerce_product:default:field_tags'
-              formatter:
-                label: hidden
-                settings:
-                  link: true
-                third_party_settings: {  }
-                type: entity_reference_label
-            additional: {  }
-            weight: 3
-          4aa34bdb-dbcb-4151-a63f-3877c9fdf542:
-            uuid: 4aa34bdb-dbcb-4151-a63f-3877c9fdf542
-            region: right
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:commerce_product:default:field_code'
-              formatter:
-                label: inline
-                settings:
-                  thousand_separator: ''
-                  prefix_suffix: true
-                third_party_settings: {  }
-                type: number_integer
-            additional: {  }
-            weight: 0
-          17303184-fbaa-490d-8695-8ab432ec4166:
-            uuid: 17303184-fbaa-490d-8695-8ab432ec4166
-            region: right
-            configuration:
-              id: 'field_block:commerce_product:default:variations'
-              label: Variations
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: default
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 1
-          97b1c485-60c1-495c-acd9-e4ce886031f7:
-            uuid: 97b1c485-60c1-495c-acd9-e4ce886031f7
-            region: right
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:commerce_product:default:variations'
-              formatter:
-                type: commerce_add_to_cart
-                label: hidden
-                settings:
-                  combine: true
-                third_party_settings: {  }
-            additional: {  }
-            weight: 2
-          a3760c89-3219-469a-b7f6-8bdf10ddebcf:
-            uuid: a3760c89-3219-469a-b7f6-8bdf10ddebcf
-            region: right
-            configuration:
-              id: 'field_block:commerce_product:default:field_brand'
-              label: Бренд
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: entity_reference_label
-                settings:
-                  link: true
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 4
-          6f836eed-1654-48c8-879c-69efd6dc2dc3:
-            uuid: 6f836eed-1654-48c8-879c-69efd6dc2dc3
-            region: right
-            configuration:
-              id: 'field_block:commerce_product:default:field_country'
-              label: Страна
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: entity_reference_label
-                settings:
-                  link: true
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 5
-          3b4e60bc-6f46-4de7-a1a0-c095596bdbb8:
-            uuid: 3b4e60bc-6f46-4de7-a1a0-c095596bdbb8
-            region: right
-            configuration:
-              id: 'field_block:commerce_product:default:field_package'
-              label: Упаковка
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: inline
-                type: string
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 3
-          31e0b6eb-cf74-4ebb-89f8-419fd44ed59a:
-            uuid: 31e0b6eb-cf74-4ebb-89f8-419fd44ed59a
-            region: bottom
-            configuration:
-              id: 'field_block:commerce_product:default:body'
-              label: Описание
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: above
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-          dd7ffd4f-ed26-4149-b315-532164c101ea:
-            uuid: dd7ffd4f-ed26-4149-b315-532164c101ea
-            region: bottom
-            configuration:
-              id: 'field_block:commerce_product:default:field_property'
-              label: Характеристики
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: above
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 1
-          b562bd36-a20d-4f75-9db5-bac8095cc925:
-            uuid: b562bd36-a20d-4f75-9db5-bac8095cc925
-            region: left
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:commerce_product:default:flag_favorite'
-            additional: {  }
-            weight: 1
-          324cde89-d918-4255-b87b-49c3e07853e7:
-            uuid: 324cde89-d918-4255-b87b-49c3e07853e7
-            region: left
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:commerce_product:default:flag_compare'
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
 _core:
   default_config_hash: myRJTydBT2SLWlJfUQN9ySCpYsacPYRjT8b8Oa7n1bo
 id: commerce_product.default.default
@@ -267,13 +29,13 @@ content:
   body:
     type: text_default
     weight: 9
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
     region: content
   field_brand:
     weight: 6
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -281,7 +43,7 @@ content:
     region: content
   field_catalog:
     weight: 5
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -298,7 +60,7 @@ content:
     region: content
   field_country:
     weight: 7
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -306,28 +68,28 @@ content:
     region: content
   field_package:
     weight: 8
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_photo:
-    type: media_thumbnail
+    type: entity_reference_entity_view
     weight: 1
     label: hidden
     settings:
-      image_style: large
-      image_link: media
+      view_mode: default
+      link: false
     third_party_settings: {  }
     region: content
   field_property:
-    weight: 11
+    type: text_default
+    weight: 10
+    region: content
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
-    region: top
   field_tags:
     weight: 2
     label: hidden
@@ -337,15 +99,15 @@ content:
     type: entity_reference_label
     region: content
   flag_compare:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    region: top
-  flag_favorite:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
+    weight: 12
     region: content
+    settings: {  }
+    third_party_settings: {  }
+  flag_favorite:
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   title:
     label: hidden
     type: string

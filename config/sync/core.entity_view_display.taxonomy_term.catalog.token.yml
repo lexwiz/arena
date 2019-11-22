@@ -1,0 +1,34 @@
+uuid: 025f2497-d0c3-400c-9c68-3a745275a246
+langcode: ru
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.token
+    - field.field.taxonomy_term.catalog.field_media_term
+    - taxonomy.vocabulary.catalog
+  module:
+    - text
+id: taxonomy_term.catalog.token
+targetEntityType: taxonomy_term
+bundle: catalog
+mode: token
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_media_term:
+    type: entity_reference_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

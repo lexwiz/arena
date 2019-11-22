@@ -12,12 +12,7 @@ dependencies:
     - field.field.commerce_product_variation.default.field_stock
   module:
     - commerce_price
-    - layout_builder
     - price_difference_formatter
-third_party_settings:
-  layout_builder:
-    allow_custom: false
-    enabled: false
 id: commerce_product_variation.default.teaser
 targetEntityType: commerce_product_variation
 bundle: default
@@ -25,7 +20,7 @@ mode: teaser
 content:
   field_code_stock:
     weight: 2
-    label: inline
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -33,7 +28,7 @@ content:
     region: content
   field_sku_m:
     weight: 1
-    label: inline
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }

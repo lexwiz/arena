@@ -6,7 +6,7 @@ dependencies:
     - field.field.media.image.feeds_item
     - field.field.media.image.field_media_image
     - image.style.large
-    - image.style.medium
+    - image.style.thumbnail
     - media.type.image
   module:
     - bootstrap_basic_image_gallery
@@ -22,7 +22,7 @@ content:
     settings:
       image_style: large
       thumbnails_per_row: '3'
-      thumbnail_image_style: medium
+      thumbnail_image_style: thumbnail
       modal_image_style: ''
       carousel_interval: '5000'
       lazyload: '1'

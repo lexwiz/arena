@@ -5,18 +5,18 @@ dependencies:
   config:
     - field.storage.commerce_product.field_code
     - field.storage.commerce_product.field_photo
-    - field.storage.commerce_product.variations
+    - field.storage.commerce_product.field_tags
     - field.storage.commerce_product_variation.field_code_stock
     - field.storage.commerce_product_variation.field_sku_m
     - field.storage.commerce_product_variation.field_stock
-    - image.style.large
+    - image.style.thumbnail
   module:
     - commerce_order
     - commerce_product
     - media
     - price_difference_formatter
     - state_machine
-    - views_bootstrap
+    - views_bulk_operations
 id: top_products
 label: 'Top products'
 module: views
@@ -82,14 +82,14 @@ display:
       row:
         type: fields
       fields:
-        title:
-          id: title
-          table: commerce_product_field_data
-          field: title
-          relationship: reverse__commerce_product__variations
+        views_bulk_operations_bulk_form:
+          id: views_bulk_operations_bulk_form
+          table: views
+          field: views_bulk_operations_bulk_form
+          relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Представление массовых действий'
           exclude: false
           alter:
             alter_text: false
@@ -118,11 +118,84 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: h2
-          element_class: title-product
+          element_type: ''
+          element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          batch: true
+          batch_size: 10
+          form_step: true
+          buttons: false
+          clear_on_exposed: false
+          action_title: Action
+          selected_actions:
+            comment_delete_action: 0
+            'entity_delete_action:commerce_order': 0
+            views_bulk_edit: views_bulk_edit
+            views_bulk_operations_delete_entity: views_bulk_operations_delete_entity
+            pathauto_update_alias: pathauto_update_alias
+            'entity:save_action:commerce_order': 0
+            'entity:delete_action:commerce_order': 'entity:delete_action:commerce_order'
+          preconfiguration:
+            views_bulk_edit:
+              label_override: ''
+              get_bundles_from_results: 1
+            views_bulk_operations_delete_entity:
+              label_override: ''
+            pathauto_update_alias:
+              label_override: ''
+            'entity:delete_action:commerce_order':
+              label_override: ''
+          plugin_id: views_bulk_operations_bulk_form
+        field_code:
+          id: field_code
+          table: commerce_product__field_code
+          field: field_code
+          relationship: reverse__commerce_product__variations
+          group_type: group
+          admin_label: ''
+          label: Код
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -131,9 +204,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
+          type: number_integer
           settings:
-            link_to_entity: true
+            thousand_separator: ''
+            prefix_suffix: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -144,8 +218,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: commerce_product
-          entity_field: title
           plugin_id: field
         field_photo:
           id: field_photo
@@ -198,7 +270,7 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: large
+            image_style: thumbnail
             image_link: content
           group_column: target_id
           group_columns: {  }
@@ -211,14 +283,14 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_code:
-          id: field_code
-          table: commerce_product__field_code
-          field: field_code
+        title:
+          id: title
+          table: commerce_product_field_data
+          field: title
           relationship: reverse__commerce_product__variations
           group_type: group
           admin_label: ''
-          label: Код
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -247,23 +319,22 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: span
-          element_class: 'col-lg-6 text-left'
-          element_label_type: strong
-          element_label_class: 'col-lg-6 text-right'
-          element_label_colon: true
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: number_integer
+          type: string
           settings:
-            thousand_separator: ''
-            prefix_suffix: true
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -274,6 +345,8 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: commerce_product
+          entity_field: title
           plugin_id: field
         field_sku_m:
           id: field_sku_m
@@ -311,10 +384,10 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: span
-          element_class: 'col-lg-6 text-left'
-          element_label_type: strong
-          element_label_class: 'col-lg-6 text-right'
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
           element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
@@ -345,7 +418,7 @@ display:
           relationship: commerce_product_variation
           group_type: group
           admin_label: ''
-          label: ''
+          label: Код_С
           exclude: false
           alter:
             alter_text: false
@@ -408,7 +481,7 @@ display:
           relationship: commerce_product_variation
           group_type: group
           admin_label: ''
-          label: ''
+          label: Склад
           exclude: false
           alter:
             alter_text: false
@@ -442,7 +515,7 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: strong
+          element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
@@ -463,7 +536,7 @@ display:
           delta_first_last: false
           multi_type: separator
           separator: ', '
-          field_api_classes: true
+          field_api_classes: false
           plugin_id: field
         price__number:
           id: price__number
@@ -472,7 +545,7 @@ display:
           relationship: commerce_product_variation
           group_type: group
           admin_label: ''
-          label: ''
+          label: Цена
           exclude: false
           alter:
             alter_text: false
@@ -522,7 +595,6 @@ display:
               fee: fee
               promotion: promotion
               tax: tax
-              shipping: shipping
           group_column: entity_id
           group_columns: {  }
           group_rows: true
@@ -536,14 +608,14 @@ display:
           entity_type: commerce_product_variation
           entity_field: price
           plugin_id: field
-        variations:
-          id: variations
-          table: commerce_product__variations
-          field: variations
+        field_tags:
+          id: field_tags
+          table: commerce_product__field_tags
+          field: field_tags
           relationship: reverse__commerce_product__variations
           group_type: group
           admin_label: ''
-          label: ''
+          label: Tags
           exclude: false
           alter:
             alter_text: false
@@ -576,7 +648,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -585,9 +657,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: commerce_add_to_cart
+          type: entity_reference_label
           settings:
-            combine: true
+            link: true
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -737,7 +809,7 @@ display:
       group_by: true
       css_class: col-sm-12
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -745,49 +817,7 @@ display:
       tags:
         - 'config:field.storage.commerce_product.field_code'
         - 'config:field.storage.commerce_product.field_photo'
-        - 'config:field.storage.commerce_product.variations'
-        - 'config:field.storage.commerce_product_variation.field_code_stock'
-        - 'config:field.storage.commerce_product_variation.field_sku_m'
-        - 'config:field.storage.commerce_product_variation.field_stock'
-  block_1:
-    display_plugin: block
-    id: block_1
-    display_title: Block
-    position: 2
-    display_options:
-      display_extenders: {  }
-      style:
-        type: views_bootstrap_grid
-        options:
-          grouping: {  }
-          row_class: 'well text-center'
-          default_row_class: true
-          alignment: horizontal
-          columns: '4'
-          col_xs: col-xs-12
-          col_sm: col-sm-6
-          col_md: col-md-6
-          col_lg: col-lg-3
-      defaults:
-        style: false
-        row: false
-        pager: false
-      row:
-        type: fields
-      pager:
-        type: some
-        options:
-          items_per_page: 8
-          offset: 0
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-      tags:
-        - 'config:field.storage.commerce_product.field_code'
-        - 'config:field.storage.commerce_product.field_photo'
-        - 'config:field.storage.commerce_product.variations'
+        - 'config:field.storage.commerce_product.field_tags'
         - 'config:field.storage.commerce_product_variation.field_code_stock'
         - 'config:field.storage.commerce_product_variation.field_sku_m'
         - 'config:field.storage.commerce_product_variation.field_stock'
@@ -800,7 +830,7 @@ display:
       display_extenders: {  }
       path: admin/top-products
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -808,7 +838,7 @@ display:
       tags:
         - 'config:field.storage.commerce_product.field_code'
         - 'config:field.storage.commerce_product.field_photo'
-        - 'config:field.storage.commerce_product.variations'
+        - 'config:field.storage.commerce_product.field_tags'
         - 'config:field.storage.commerce_product_variation.field_code_stock'
         - 'config:field.storage.commerce_product_variation.field_sku_m'
         - 'config:field.storage.commerce_product_variation.field_stock'

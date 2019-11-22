@@ -3,26 +3,22 @@ langcode: ru
 status: true
 dependencies:
   config:
-    - field.storage.commerce_product.field_brand
+    - core.entity_view_mode.commerce_product.teaser
     - field.storage.commerce_product.field_code
-    - field.storage.commerce_product.field_country
     - field.storage.commerce_product.field_photo
     - field.storage.commerce_product.field_tags
     - field.storage.commerce_product.variations
-    - field.storage.commerce_product_variation.field_sku_m
-    - field.storage.commerce_product_variation.field_stock
-    - flag.flag.compare
-    - flag.flag.favorite
+    - taxonomy.vocabulary.brand
+    - taxonomy.vocabulary.catalog
+    - taxonomy.vocabulary.country
     - views.view.child_categories
   module:
-    - better_exposed_filters
     - commerce_product
-    - flag
     - media
-    - price_difference_formatter
-    - taxonomy_entity_index
+    - product_taxonomy_filter
+    - selective_better_exposed_filters
+    - taxonomy
     - views_bootstrap
-    - views_selective_filters
 id: taxonomy_term_product
 label: 'Taxonomy term product'
 module: views
@@ -88,11 +84,11 @@ display:
                 bef_slider_max: null
                 bef_slider_step: !!float 1
                 bef_slider_animate: ''
-                bef_slider_orientation: ''
+                bef_slider_orientation: horizontal
               more_options:
                 is_secondary: false
                 placeholder_text: ''
-            field_brand_target_id_selective:
+            field_brand_target_id:
               bef_format: default
               more_options:
                 bef_select_all_none: false
@@ -100,7 +96,8 @@ display:
                 is_secondary: false
                 rewrite:
                   filter_rewrite_values: ''
-            field_country_target_id_selective:
+                bef_show_only_used: 1
+            field_country_target_id:
               bef_format: default
               more_options:
                 bef_select_all_none: false
@@ -108,6 +105,7 @@ display:
                 is_secondary: false
                 rewrite:
                   filter_rewrite_values: ''
+                bef_show_only_used: 1
           text_input_required_format: basic_html
       pager:
         type: full
@@ -133,9 +131,9 @@ display:
       style:
         type: views_bootstrap_grid
         options:
-          grouping: {  }
-          row_class: 'well text-center'
-          default_row_class: true
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
           alignment: horizontal
           columns: '4'
           col_xs: col-xs-12
@@ -143,14 +141,10 @@ display:
           col_md: col-md-6
           col_lg: col-lg-3
       row:
-        type: fields
+        type: 'entity:commerce_product'
         options:
-          default_field_elements: true
-          inline:
-            link_flag_1: link_flag_1
-            link_flag: link_flag
-          separator: ''
-          hide_empty: false
+          relationship: none
+          view_mode: teaser
       fields:
         title:
           id: title
@@ -408,204 +402,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_sku_m:
-          id: field_sku_m
-          table: commerce_product_variation__field_sku_m
-          field: field_sku_m
-          relationship: variations
-          group_type: group
-          admin_label: ''
-          label: Артикул
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: span
-          element_class: 'col-lg-6 text-left'
-          element_label_type: strong
-          element_label_class: 'col-lg-6 text-right'
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: true
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_stock:
-          id: field_stock
-          table: commerce_product_variation__field_stock
-          field: field_stock
-          relationship: variations
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: strong
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_integer
-          settings:
-            thousand_separator: ''
-            prefix_suffix: true
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: true
-          plugin_id: field
-        price__number:
-          id: price__number
-          table: commerce_product_variation_field_data
-          field: price__number
-          relationship: variations
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: number
-          type: price_difference_formatter
-          settings:
-            strip_trailing_zeroes: 0
-            currency_display: symbol
-            adjustment_types:
-              fee: fee
-              promotion: promotion
-              tax: tax
-              shipping: shipping
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          entity_type: commerce_product_variation
-          entity_field: price
-          plugin_id: field
         variations:
           id: variations
           table: commerce_product__variations
@@ -669,232 +465,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        link_flag_1:
-          id: link_flag_1
-          table: flagging
-          field: link_flag
-          relationship: flag_relationship_1
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          entity_type: flagging
-          plugin_id: flag_link
-        link_flag:
-          id: link_flag
-          table: flagging
-          field: link_flag
-          relationship: flag_relationship
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          entity_type: flagging
-          plugin_id: flag_link
-        field_brand:
-          id: field_brand
-          table: commerce_product__field_brand
-          field: field_brand
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_country:
-          id: field_country
-          table: commerce_product__field_country
-          field: field_country
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
       filters:
         status:
           value: '1'
@@ -940,7 +510,7 @@ display:
           group_info:
             label: 'В наличии'
             description: ''
-            identifier: field_stock_value
+            identifier: stock_value
             optional: true
             widget: select
             multiple: false
@@ -963,24 +533,24 @@ display:
                   min: ''
                   max: ''
           plugin_id: numeric
-        field_brand_target_id_selective:
-          id: field_brand_target_id_selective
+        field_brand_target_id:
+          id: field_brand_target_id
           table: commerce_product__field_brand
-          field: field_brand_target_id_selective
+          field: field_brand_target_id
           relationship: none
           group_type: group
           admin_label: ''
-          operator: in
+          operator: or
           value: {  }
           group: 1
           exposed: true
           expose:
-            operator_id: ''
+            operator_id: field_brand_target_id_op
             label: Бренд
             description: ''
             use_operator: false
-            operator: ''
-            identifier: field_brand_target_id_selective
+            operator: field_brand_target_id_op
+            identifier: field_brand_target_id
             required: false
             remember: false
             multiple: false
@@ -1001,30 +571,31 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          selective_display_field: field_brand
-          selective_entity_type: ''
-          selective_display_sort: ASC
-          selective_aggregated_fields: ''
-          selective_items_limit: '100'
-          plugin_id: views_selective_filters_filter
-        field_country_target_id_selective:
-          id: field_country_target_id_selective
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: brand
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_country_target_id:
+          id: field_country_target_id
           table: commerce_product__field_country
-          field: field_country_target_id_selective
+          field: field_country_target_id
           relationship: none
           group_type: group
           admin_label: ''
-          operator: in
+          operator: or
           value: {  }
           group: 1
           exposed: true
           expose:
-            operator_id: ''
+            operator_id: field_country_target_id_op
             label: Страна
             description: ''
             use_operator: false
-            operator: ''
-            identifier: field_country_target_id_selective
+            operator: field_country_target_id_op
+            identifier: field_country_target_id
             required: false
             remember: false
             multiple: false
@@ -1045,12 +616,13 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          selective_display_field: field_country
-          selective_entity_type: ''
-          selective_display_sort: ASC
-          selective_aggregated_fields: ''
-          selective_items_limit: '100'
-          plugin_id: views_selective_filters_filter
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: country
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
       sorts:
         price__number:
           id: price__number
@@ -1130,50 +702,26 @@ display:
           admin_label: 'variations: Product variation'
           required: false
           plugin_id: standard
-        flag_relationship:
-          id: flag_relationship
-          table: commerce_product_field_data
-          field: flag_relationship
-          relationship: none
-          group_type: group
-          admin_label: 'Flags Favorite'
-          required: false
-          flag: favorite
-          user_scope: current
-          entity_type: commerce_product
-          plugin_id: flag_relationship
-        flag_relationship_1:
-          id: flag_relationship_1
-          table: commerce_product_field_data
-          field: flag_relationship
-          relationship: none
-          group_type: group
-          admin_label: 'Flags Compare'
-          required: false
-          flag: compare
-          user_scope: current
-          entity_type: commerce_product
-          plugin_id: flag_relationship
       arguments:
-        taxonomy_entity_index_tid_depth:
-          id: taxonomy_entity_index_tid_depth
-          table: commerce_product
-          field: taxonomy_entity_index_tid_depth
+        term_product_tid_depth:
+          id: term_product_tid_depth
+          table: commerce_product_field_data
+          field: term_product_tid_depth
           relationship: none
           group_type: group
           admin_label: ''
-          default_action: 'not found'
+          default_action: default
           exception:
             value: all
             title_enable: false
             title: All
           title_enable: true
-          title: '{{ arguments.taxonomy_entity_index_tid_depth }}'
+          title: '{{ arguments.term_product_tid_depth }}'
           default_argument_type: taxonomy_tid
           default_argument_options:
+            term_page: '1'
             node: true
             anyall: +
-            term_page: '0'
             limit: false
             vids: {  }
           default_argument_skip_url: false
@@ -1191,15 +739,17 @@ display:
             type: 'entity:taxonomy_term'
             fail: 'not found'
           validate_options:
-            access: true
+            bundles:
+              catalog: catalog
             operation: view
             multiple: 0
-            bundles: {  }
+            access: false
           depth: '4'
           break_phrase: true
           use_taxonomy_term_path: false
+          reference_field: field_catalog
           entity_type: commerce_product
-          plugin_id: taxonomy_entity_index_tid_depth
+          plugin_id: taxonomy_index_tid_product_depth
       display_extenders: {  }
       css_class: col-sm-12
       use_ajax: false
@@ -1216,15 +766,12 @@ display:
         - url.query_args
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
+        - user
       tags:
-        - 'config:field.storage.commerce_product.field_brand'
         - 'config:field.storage.commerce_product.field_code'
-        - 'config:field.storage.commerce_product.field_country'
         - 'config:field.storage.commerce_product.field_photo'
         - 'config:field.storage.commerce_product.field_tags'
         - 'config:field.storage.commerce_product.variations'
-        - 'config:field.storage.commerce_product_variation.field_sku_m'
-        - 'config:field.storage.commerce_product_variation.field_stock'
   page_1:
     display_plugin: page
     id: page_1
@@ -1243,12 +790,9 @@ display:
         - url.query_args
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
+        - user
       tags:
-        - 'config:field.storage.commerce_product.field_brand'
         - 'config:field.storage.commerce_product.field_code'
-        - 'config:field.storage.commerce_product.field_country'
         - 'config:field.storage.commerce_product.field_photo'
         - 'config:field.storage.commerce_product.field_tags'
         - 'config:field.storage.commerce_product.variations'
-        - 'config:field.storage.commerce_product_variation.field_sku_m'
-        - 'config:field.storage.commerce_product_variation.field_stock'

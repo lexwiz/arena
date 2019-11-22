@@ -9,6 +9,6 @@ label: Default
 description: ''
 variationType: default
 multipleVariations: false
-injectVariationFields: false
+injectVariationFields: true
 traits: {  }
 locked: false
