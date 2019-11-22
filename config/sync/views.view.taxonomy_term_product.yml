@@ -9,15 +9,14 @@ dependencies:
     - field.storage.commerce_product.field_tags
     - field.storage.commerce_product.variations
     - taxonomy.vocabulary.brand
-    - taxonomy.vocabulary.catalog
     - taxonomy.vocabulary.country
     - views.view.child_categories
   module:
     - commerce_product
     - media
-    - product_taxonomy_filter
     - selective_better_exposed_filters
     - taxonomy
+    - taxonomy_entity_index
     - views_bootstrap
 id: taxonomy_term_product
 label: 'Taxonomy term product'
@@ -703,10 +702,10 @@ display:
           required: false
           plugin_id: standard
       arguments:
-        term_product_tid_depth:
-          id: term_product_tid_depth
-          table: commerce_product_field_data
-          field: term_product_tid_depth
+        taxonomy_entity_index_tid_depth:
+          id: taxonomy_entity_index_tid_depth
+          table: commerce_product
+          field: taxonomy_entity_index_tid_depth
           relationship: none
           group_type: group
           admin_label: ''
@@ -739,20 +738,18 @@ display:
             type: 'entity:taxonomy_term'
             fail: 'not found'
           validate_options:
-            bundles:
-              catalog: catalog
+            access: true
             operation: view
-            multiple: 0
-            access: false
+            multiple: 1
+            bundles: {  }
           depth: '4'
           break_phrase: true
           use_taxonomy_term_path: false
-          reference_field: field_catalog
           entity_type: commerce_product
-          plugin_id: taxonomy_index_tid_product_depth
+          plugin_id: taxonomy_entity_index_tid_depth
       display_extenders: {  }
       css_class: col-sm-12
-      use_ajax: false
+      use_ajax: true
       filter_groups:
         operator: AND
         groups:
