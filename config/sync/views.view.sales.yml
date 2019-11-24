@@ -473,14 +473,14 @@ display:
           error_message: true
           plugin_id: taxonomy_index_tid
       sorts: {  }
-      title: 'Top products'
+      title: Распродажа
       header: {  }
       footer: {  }
       empty: {  }
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
-      css_class: col-sm-12
+      css_class: ''
       link_url: ''
       link_display: page_1
       use_more: false

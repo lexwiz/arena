@@ -22,10 +22,15 @@
 <article{{ attributes }} class="well text-center">
   <h2 class="title-product">{{- product.title -}}</h2>
   {{- product.field_photo -}}
+  {{- product.field_tags -}}
   <strong class="text-success">{{- product.field_code -}}</strong>
   {{- product.variation_field_sku_m -}}
   {{- product.variation_field_code_stock -}}
   <strong>{{- product.variation_field_stock -}}</strong>
   {{- product.variation_price -}}
   {{- product.variations -}}
+  <div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-6 text-uppercase"><strong>{{- product.flag_compare -}}</strong></div>
+  <div class="col-xs-12 col-sm-12 col-md-6 text-uppercase"><strong>{{- product.flag_favorite -}}</strong></div>
+  </div>
 </article>

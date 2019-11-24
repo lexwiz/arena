@@ -441,7 +441,7 @@ display:
           plugin_id: recently_read_relationship
       arguments: {  }
       display_extenders: {  }
-      css_class: col-sm-12
+      css_class: ''
     cache_metadata:
       max-age: -1
       contexts:

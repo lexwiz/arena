@@ -71,8 +71,8 @@ display:
       style:
         type: views_bootstrap_grid
         options:
-          row_class: 'well text-center'
-          default_row_class: true
+          row_class: ''
+          default_row_class: false
           uses_fields: false
           alignment: horizontal
           columns: '4'
@@ -311,7 +311,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
-      css_class: col-sm-12
+      css_class: ''
     cache_metadata:
       max-age: -1
       contexts:

@@ -2,10 +2,10 @@ delete_config: count
 plugins:
   user: user
   node: node
+  commerce_product: commerce_product
   taxonomy_term: taxonomy_term
-  commerce_product: 0
 _core:
   default_config_hash: nv-s9aKm1RBBpsvmRmlK_jChwlthIHetdhtzBYZoyCs
 langcode: ru
 delete_time: '-1 hours'
-count: '20'
+count: '8'

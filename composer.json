@@ -54,7 +54,7 @@
         "drupal/price_difference_formatter": "^1.1",
         "drupal/product_taxonomy_filter": "2.x-dev",
         "drupal/recaptcha": "^2.4",
-        "drupal/recently_read": "1.x-dev",
+        "drupal/recently_read": "^1.0",
         "drupal/redirect": "^1.4",
         "drupal/search_api": "^1.12",
         "drupal/search_api_autocomplete": "^1.2",
