@@ -6624,18 +6624,8 @@ h2.title-product {
 .bootstrap-basic-image-gallery {
   position: relative; }
 
-.flag-compare,
-.flag-favorite {
-  height: 22px;
-  text-transform: uppercase;
-  font-weight: 600;
-  width: 50%;
-  display: inline-block; }
-
-.flag-compare a,
-.flag-favorite a {
-  font-size: 14px;
-  padding-left: 8px; }
+.field--name-variations {
+  margin: 10px 0; }
 
 .views-field-variations,
 .thumbnails {

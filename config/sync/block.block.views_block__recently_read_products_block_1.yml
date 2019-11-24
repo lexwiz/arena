@@ -17,10 +17,10 @@ provider: null
 plugin: 'views_block:recently_read_products-block_1'
 settings:
   id: 'views_block:recently_read_products-block_1'
-  label: ''
+  label: 'Вы смотрели'
   provider: views
   label_display: visible
-  views_label: ''
+  views_label: 'Вы смотрели'
   items_per_page: none
 visibility:
   request_path:

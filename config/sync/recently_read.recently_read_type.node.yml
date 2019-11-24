@@ -1,4 +1,4 @@
-uuid: 1a98923f-75c8-4b0e-91ef-6bed6d9c40a1
+uuid: 7faba7c7-6218-4ead-b802-33ce5740bbc0
 langcode: ru
 status: true
 dependencies: {  }
@@ -6,6 +6,5 @@ _core:
   default_config_hash: 8B7lXSdMCMx3Lyn-KB5T3UEO8LyFV23FTrZEioCmPC4
 id: node
 label: Node
-enabled: true
-types:
-  - article
+enabled: false
+types: {  }

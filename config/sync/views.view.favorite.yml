@@ -3,14 +3,11 @@ langcode: ru
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.commerce_product.teaser
     - field.storage.commerce_product.field_code
     - field.storage.commerce_product.field_photo
     - field.storage.commerce_product.field_tags
     - field.storage.commerce_product.variations
-    - field.storage.commerce_product_variation.field_code_stock
-    - field.storage.commerce_product_variation.field_sku_m
-    - field.storage.commerce_product_variation.field_stock
-    - flag.flag.compare
     - flag.flag.favorite
     - image.style.large
     - system.menu.account
@@ -20,7 +17,6 @@ dependencies:
     - commerce_product
     - flag
     - media
-    - price_difference_formatter
     - user
     - views_bootstrap
 id: favorite
@@ -86,9 +82,9 @@ display:
       style:
         type: views_bootstrap_grid
         options:
-          grouping: {  }
-          row_class: 'well text-center'
-          default_row_class: true
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
           alignment: horizontal
           columns: '4'
           col_xs: col-xs-12
@@ -96,14 +92,10 @@ display:
           col_md: col-md-6
           col_lg: col-lg-3
       row:
-        type: fields
+        type: 'entity:commerce_product'
         options:
-          default_field_elements: true
-          inline:
-            link_flag_1: link_flag_1
-            link_flag: link_flag
-          separator: ''
-          hide_empty: false
+          relationship: none
+          view_mode: teaser
       fields:
         title:
           id: title
@@ -361,267 +353,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_sku_m:
-          id: field_sku_m
-          table: commerce_product_variation__field_sku_m
-          field: field_sku_m
-          relationship: variations
-          group_type: group
-          admin_label: ''
-          label: Артикул
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: span
-          element_class: 'col-lg-6 text-left'
-          element_label_type: strong
-          element_label_class: 'col-lg-6 text-right'
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: true
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_code_stock:
-          id: field_code_stock
-          table: commerce_product_variation__field_code_stock
-          field: field_code_stock
-          relationship: variations
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_stock:
-          id: field_stock
-          table: commerce_product_variation__field_stock
-          field: field_stock
-          relationship: variations
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: strong
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_integer
-          settings:
-            thousand_separator: ''
-            prefix_suffix: true
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: true
-          plugin_id: field
-        price__number:
-          id: price__number
-          table: commerce_product_variation_field_data
-          field: price__number
-          relationship: variations
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: strong
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: number
-          type: price_difference_formatter
-          settings:
-            strip_trailing_zeroes: 0
-            currency_display: symbol
-            adjustment_types:
-              fee: fee
-              promotion: promotion
-              tax: tax
-              shipping: shipping
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          entity_type: commerce_product_variation
-          entity_field: price
-          plugin_id: field
         variations:
           id: variations
           table: commerce_product__variations
@@ -685,106 +416,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        link_flag_1:
-          id: link_flag_1
-          table: flagging
-          field: link_flag
-          relationship: flag_relationship_1
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          entity_type: flagging
-          plugin_id: flag_link
-        link_flag:
-          id: link_flag
-          table: flagging
-          field: link_flag
-          relationship: flag_relationship
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          entity_type: flagging
-          plugin_id: flag_link
       filters:
         status:
           value: '1'
@@ -815,30 +446,9 @@ display:
           user_scope: current
           entity_type: commerce_product
           plugin_id: flag_relationship
-        variations:
-          id: variations
-          table: commerce_product__variations
-          field: variations
-          relationship: none
-          group_type: group
-          admin_label: 'variations: Product variation'
-          required: false
-          plugin_id: standard
-        flag_relationship_1:
-          id: flag_relationship_1
-          table: commerce_product_field_data
-          field: flag_relationship
-          relationship: none
-          group_type: group
-          admin_label: 'Flags Compare'
-          required: false
-          flag: compare
-          user_scope: current
-          entity_type: commerce_product
-          plugin_id: flag_relationship
       arguments: {  }
       display_extenders: {  }
-      css_class: col-sm-12
+      css_class: ''
     cache_metadata:
       max-age: -1
       contexts:
@@ -851,9 +461,6 @@ display:
         - 'config:field.storage.commerce_product.field_photo'
         - 'config:field.storage.commerce_product.field_tags'
         - 'config:field.storage.commerce_product.variations'
-        - 'config:field.storage.commerce_product_variation.field_code_stock'
-        - 'config:field.storage.commerce_product_variation.field_sku_m'
-        - 'config:field.storage.commerce_product_variation.field_stock'
   page_1:
     display_plugin: page
     id: page_1
@@ -883,6 +490,3 @@ display:
         - 'config:field.storage.commerce_product.field_photo'
         - 'config:field.storage.commerce_product.field_tags'
         - 'config:field.storage.commerce_product.variations'
-        - 'config:field.storage.commerce_product_variation.field_code_stock'
-        - 'config:field.storage.commerce_product_variation.field_sku_m'
-        - 'config:field.storage.commerce_product_variation.field_stock'

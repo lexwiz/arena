@@ -38,10 +38,9 @@ logo:
   use_default: false
 breadcrumb_home: 1
 navbar_position: fixed-top
+image_responsive: 1
 features:
   comment_user_picture: true
   comment_user_verification: true
   favicon: true
   node_user_picture: true
-image_responsive: 0
-langcode: ru

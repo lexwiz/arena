@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.taxonomy_term.field_image_term
-    - image.style.medium
     - image.style.thumbnail
     - system.menu.main
     - taxonomy.vocabulary.brand
@@ -153,7 +152,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: medium
+            image_style: thumbnail
             image_link: content
           group_column: ''
           group_columns: {  }
@@ -261,7 +260,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
-      css_class: col-sm-12
+      css_class: ''
     cache_metadata:
       max-age: -1
       contexts:
