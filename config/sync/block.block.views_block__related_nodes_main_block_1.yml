@@ -1,0 +1,31 @@
+uuid: 3838301d-8757-48fd-9ad5-e6b2b5e5878b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.related_nodes_main
+  module:
+    - system
+    - views
+  theme:
+    - kanzarena
+id: views_block__related_nodes_main_block_1
+theme: kanzarena
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:related_nodes_main-block_1'
+settings:
+  id: 'views_block:related_nodes_main-block_1'
+  label: 'Похожие товары'
+  provider: views
+  label_display: visible
+  views_label: 'Похожие товары'
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/product/*'
+    negate: false
+    context_mapping: {  }
