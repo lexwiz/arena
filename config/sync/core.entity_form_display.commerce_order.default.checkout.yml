@@ -1,4 +1,4 @@
-uuid: d38a11ac-cc86-40bd-b03e-d5171890ae73
+uuid: 1d3a6640-94f9-4ea3-9055-3ad8995eb11c
 langcode: ru
 status: true
 dependencies:
@@ -15,13 +15,13 @@ bundle: default
 mode: checkout
 content:
   field_comment_order:
-    type: string_textarea
     weight: 0
-    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+    type: string_textarea
+    region: content
 hidden:
   adjustments: true
   billing_profile: true
