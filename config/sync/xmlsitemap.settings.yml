@@ -7,7 +7,7 @@ path: xmlsitemap
 frontpage_priority: !!float 1
 frontpage_changefreq: 86400
 lastmod_format: 'Y-m-d\TH:i\Z'
-gz: false
+gz: true
 clean_url: 0
 disable_cron_regeneration: false
 i18n_selection_mode: simple
