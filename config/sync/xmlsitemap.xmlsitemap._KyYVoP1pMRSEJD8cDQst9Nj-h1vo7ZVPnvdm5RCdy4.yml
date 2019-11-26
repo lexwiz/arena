@@ -1,8 +1,8 @@
-uuid: 403dbdc1-95b4-410a-90eb-6d9db3e1d65b
+uuid: ae3a374d-8b0a-47cb-ab0d-342d487d5197
 langcode: ru
 status: true
 dependencies: {  }
 id: _KyYVoP1pMRSEJD8cDQst9Nj-h1vo7ZVPnvdm5RCdy4
-label: 'http://kanzarena.localhost:8000'
+label: 'https://www.kanzarena.ru'
 context:
   language: ru
