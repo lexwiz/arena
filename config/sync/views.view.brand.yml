@@ -68,7 +68,7 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 40
+          items_per_page: 60
           offset: 0
           id: 0
           total_pages: null
@@ -89,17 +89,20 @@ display:
       style:
         type: views_bootstrap_grid
         options:
-          grouping: {  }
-          row_class: 'well text-center'
-          default_row_class: true
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
           alignment: horizontal
-          columns: '4'
-          col_xs: col-xs-12
-          col_sm: col-sm-6
-          col_md: col-md-3
-          col_lg: col-lg-3
+          columns: '6'
+          col_xs: col-xs-4
+          col_sm: col-sm-2
+          col_md: col-md-2
+          col_lg: col-lg-2
       row:
-        type: fields
+        type: 'entity:taxonomy_term'
+        options:
+          relationship: none
+          view_mode: default
       fields:
         field_image_term:
           id: field_image_term
@@ -280,9 +283,9 @@ display:
       style:
         type: views_bootstrap_grid
         options:
-          grouping: {  }
-          row_class: 'well text-center'
-          default_row_class: true
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
           alignment: horizontal
           columns: '6'
           col_xs: col-xs-4
@@ -297,8 +300,10 @@ display:
         filters: false
         filter_groups: false
       row:
-        type: fields
-        options: {  }
+        type: 'entity:taxonomy_term'
+        options:
+          relationship: none
+          view_mode: default
       fields:
         field_image_term:
           id: field_image_term

@@ -748,7 +748,7 @@ display:
           entity_type: commerce_product
           plugin_id: taxonomy_entity_index_tid_depth
       display_extenders: {  }
-      css_class: col-sm-12
+      css_class: ''
       use_ajax: true
       filter_groups:
         operator: AND

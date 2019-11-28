@@ -13,7 +13,7 @@ dependencies:
     - taxonomy.vocabulary.tags
   content:
     - 'taxonomy_term:tags:09a4e672-a9f8-48ad-8146-8fc8c8dcfb0a'
-    - 'taxonomy_term:tags:aef1d62e-5240-41af-b1e2-dcc65a0f647c'
+    - 'taxonomy_term:tags:5359fe9b-251e-4646-bf6f-09eebe5d6325'
   module:
     - commerce_product
     - media
@@ -573,7 +573,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            - 670
+            - 672
           group: 1
           exposed: false
           expose:

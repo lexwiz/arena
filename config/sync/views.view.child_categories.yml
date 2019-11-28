@@ -58,8 +58,8 @@ display:
       style:
         type: views_bootstrap_grid
         options:
-          row_class: 'thumbnail text-center'
-          default_row_class: true
+          row_class: ''
+          default_row_class: false
           uses_fields: false
           alignment: horizontal
           columns: '6'
@@ -304,27 +304,6 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - user.permissions
-      tags:
-        - 'config:field.storage.taxonomy_term.field_media_term'
-  page_1:
-    display_plugin: page
-    id: page_1
-    display_title: Page
-    position: 2
-    display_options:
-      display_extenders: {  }
-      path: taxonomy/term/%
-      empty: {  }
-      defaults:
-        empty: false
-      enabled: false
     cache_metadata:
       max-age: -1
       contexts:
