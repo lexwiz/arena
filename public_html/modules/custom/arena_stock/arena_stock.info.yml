@@ -1,0 +1,10 @@
+name: Arena Stock
+description: 'Adds the commerce stock management feture.'
+package: Commerce
+type: module
+core: 8.x
+
+dependencies:
+  - drupal:system (>=8.5.0)
+  - commerce:commerce
+  - commerce:commerce_product
