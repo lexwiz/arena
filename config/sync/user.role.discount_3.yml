@@ -1,0 +1,9 @@
+uuid: 89db41a5-9869-40fb-9b03-cf991a3b7c42
+langcode: ru
+status: true
+dependencies: {  }
+id: discount_3
+label: 'Discount 3%'
+weight: 3
+is_admin: null
+permissions: {  }

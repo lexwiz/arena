@@ -53,6 +53,7 @@ module:
   flag: 0
   fz152: 0
   fz152_contact: 0
+  google_analytics: 0
   help: 0
   history: 0
   image: 0

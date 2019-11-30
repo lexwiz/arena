@@ -1,0 +1,14 @@
+uuid: 28dcc5e3-506f-496e-8d72-c6a4b8b45721
+langcode: ru
+status: true
+dependencies:
+  config:
+    - user.role.discount_5
+  module:
+    - user
+id: user_remove_role_action.discount_5
+label: 'Remove the Discount 5% role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: discount_5

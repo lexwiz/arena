@@ -1,0 +1,14 @@
+uuid: 1472c1a4-c7e4-4fbd-98e3-6958c13be491
+langcode: ru
+status: true
+dependencies:
+  config:
+    - user.role.discount_7
+  module:
+    - user
+id: user_add_role_action.discount_7
+label: 'Add the Discount 7% role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: discount_7
