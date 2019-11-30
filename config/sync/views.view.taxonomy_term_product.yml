@@ -4,20 +4,20 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.commerce_product.teaser
+    - field.storage.commerce_product.field_brand
     - field.storage.commerce_product.field_code
+    - field.storage.commerce_product.field_country
     - field.storage.commerce_product.field_photo
     - field.storage.commerce_product.field_tags
     - field.storage.commerce_product.variations
-    - taxonomy.vocabulary.brand
-    - taxonomy.vocabulary.country
     - views.view.child_categories
   module:
+    - better_exposed_filters
     - commerce_product
     - media
-    - selective_better_exposed_filters
-    - taxonomy
     - taxonomy_entity_index
     - views_bootstrap
+    - views_selective_filters
 id: taxonomy_term_product
 label: 'Taxonomy term product'
 module: views
@@ -83,11 +83,11 @@ display:
                 bef_slider_max: null
                 bef_slider_step: !!float 1
                 bef_slider_animate: ''
-                bef_slider_orientation: horizontal
+                bef_slider_orientation: ''
               more_options:
                 is_secondary: false
                 placeholder_text: ''
-            field_brand_target_id:
+            field_brand_target_id_selective:
               bef_format: default
               more_options:
                 bef_select_all_none: false
@@ -95,8 +95,7 @@ display:
                 is_secondary: false
                 rewrite:
                   filter_rewrite_values: ''
-                bef_show_only_used: 1
-            field_country_target_id:
+            field_country_target_id_selective:
               bef_format: default
               more_options:
                 bef_select_all_none: false
@@ -104,7 +103,6 @@ display:
                 is_secondary: false
                 rewrite:
                   filter_rewrite_values: ''
-                bef_show_only_used: 1
           text_input_required_format: basic_html
       pager:
         type: full
@@ -464,6 +462,132 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        field_brand:
+          id: field_brand
+          table: commerce_product__field_brand
+          field: field_brand
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_country:
+          id: field_country
+          table: commerce_product__field_country
+          field: field_country
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       filters:
         status:
           value: '1'
@@ -532,24 +656,24 @@ display:
                   min: ''
                   max: ''
           plugin_id: numeric
-        field_brand_target_id:
-          id: field_brand_target_id
+        field_brand_target_id_selective:
+          id: field_brand_target_id_selective
           table: commerce_product__field_brand
-          field: field_brand_target_id
+          field: field_brand_target_id_selective
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
+          operator: in
           value: {  }
           group: 1
           exposed: true
           expose:
-            operator_id: field_brand_target_id_op
+            operator_id: ''
             label: Бренд
             description: ''
             use_operator: false
-            operator: field_brand_target_id_op
-            identifier: field_brand_target_id
+            operator: ''
+            identifier: field_brand_target_id_selective
             required: false
             remember: false
             multiple: false
@@ -557,6 +681,10 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+              discount_3: '0'
+              discount_5: '0'
+              discount_7: '0'
+              discount_10: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -570,31 +698,30 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: brand
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-        field_country_target_id:
-          id: field_country_target_id
+          selective_display_field: field_brand
+          selective_entity_type: ''
+          selective_display_sort: ASC
+          selective_aggregated_fields: ''
+          selective_items_limit: '10'
+          plugin_id: views_selective_filters_filter
+        field_country_target_id_selective:
+          id: field_country_target_id_selective
           table: commerce_product__field_country
-          field: field_country_target_id
+          field: field_country_target_id_selective
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
+          operator: in
           value: {  }
           group: 1
           exposed: true
           expose:
-            operator_id: field_country_target_id_op
+            operator_id: ''
             label: Страна
             description: ''
             use_operator: false
-            operator: field_country_target_id_op
-            identifier: field_country_target_id
+            operator: ''
+            identifier: field_country_target_id_selective
             required: false
             remember: false
             multiple: false
@@ -602,6 +729,10 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+              discount_3: '0'
+              discount_5: '0'
+              discount_7: '0'
+              discount_10: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -615,13 +746,12 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: country
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
+          selective_display_field: field_country
+          selective_entity_type: ''
+          selective_display_sort: ASC
+          selective_aggregated_fields: ''
+          selective_items_limit: '10'
+          plugin_id: views_selective_filters_filter
       sorts:
         price__number:
           id: price__number
@@ -763,9 +893,10 @@ display:
         - url.query_args
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
-        - user
       tags:
+        - 'config:field.storage.commerce_product.field_brand'
         - 'config:field.storage.commerce_product.field_code'
+        - 'config:field.storage.commerce_product.field_country'
         - 'config:field.storage.commerce_product.field_photo'
         - 'config:field.storage.commerce_product.field_tags'
         - 'config:field.storage.commerce_product.variations'
@@ -787,9 +918,10 @@ display:
         - url.query_args
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
-        - user
       tags:
+        - 'config:field.storage.commerce_product.field_brand'
         - 'config:field.storage.commerce_product.field_code'
+        - 'config:field.storage.commerce_product.field_country'
         - 'config:field.storage.commerce_product.field_photo'
         - 'config:field.storage.commerce_product.field_tags'
         - 'config:field.storage.commerce_product.variations'
