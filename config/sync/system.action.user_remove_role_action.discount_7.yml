@@ -1,0 +1,14 @@
+uuid: d26da0a4-b4c1-4ba6-8070-ff565433faf5
+langcode: ru
+status: true
+dependencies:
+  config:
+    - user.role.discount_7
+  module:
+    - user
+id: user_remove_role_action.discount_7
+label: 'Remove the Discount 7% role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: discount_7
