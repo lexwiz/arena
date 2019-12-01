@@ -2,16 +2,16 @@ uuid: 62e65a2f-3c6a-421a-89a0-0f0e6d039c67
 langcode: ru
 status: true
 dependencies:
-  config:
-    - field.storage.commerce_product.variations
-    - field.storage.commerce_product_variation.field_barcode
-    - field.storage.commerce_product.field_code
-    - field.storage.commerce_product_variation.field_sku_m
-    - field.storage.commerce_product_variation.field_stock
-    - search_api.server.default_server
   module:
     - commerce_product
     - search_api
+  config:
+    - field.storage.commerce_product.variations
+    - field.storage.commerce_product_variation.field_stock
+    - field.storage.commerce_product_variation.field_sku_m
+    - field.storage.commerce_product_variation.field_barcode
+    - field.storage.commerce_product.field_code
+    - search_api.server.default_server
 id: default_product_index
 name: 'Default product index'
 description: ''

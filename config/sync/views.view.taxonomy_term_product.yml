@@ -798,6 +798,16 @@ display:
           plugin_id: standard
       title: 'Taxonomy term product'
       header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: '<div class = "well">Отображается с @start по @end из @total товаров</div>'
+          plugin_id: result
         view:
           id: view
           table: views
@@ -809,16 +819,6 @@ display:
           view_to_insert: 'child_categories:block_1'
           inherit_arguments: true
           plugin_id: view
-        result:
-          id: result
-          table: views
-          field: result
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          content: '<div class = "well">Отображается с @start по @end из @total товаров</div>'
-          plugin_id: result
       footer: {  }
       empty: {  }
       relationships:
@@ -848,9 +848,9 @@ display:
           title: '{{ arguments.term_product_tid_depth }}'
           default_argument_type: taxonomy_tid
           default_argument_options:
-            term_page: '1'
             node: true
             anyall: +
+            term_page: '0'
             limit: false
             vids: {  }
           default_argument_skip_url: false
@@ -866,14 +866,14 @@ display:
           specify_validation: true
           validate:
             type: 'entity:taxonomy_term'
-            fail: 'not found'
+            fail: empty
           validate_options:
             access: true
             operation: view
             multiple: 1
             bundles: {  }
-          depth: '4'
-          break_phrase: true
+          depth: '2'
+          break_phrase: false
           use_taxonomy_term_path: false
           entity_type: commerce_product
           plugin_id: taxonomy_entity_index_tid_depth
@@ -909,6 +909,7 @@ display:
       display_extenders: {  }
       path: taxonomy/term/%
       exposed_block: false
+      enabled: true
     cache_metadata:
       max-age: -1
       contexts:

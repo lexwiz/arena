@@ -6,6 +6,7 @@ dependencies:
     - field.storage.taxonomy_term.field_media_term
     - image.style.large
     - taxonomy.vocabulary.catalog
+    - views.view.taxonomy_term_product
   module:
     - media
     - taxonomy
@@ -227,7 +228,18 @@ display:
       title: 'Child categories'
       header: {  }
       footer: {  }
-      empty: {  }
+      empty:
+        view:
+          id: view
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          view_to_insert: 'taxonomy_term_product:block_1'
+          inherit_arguments: true
+          plugin_id: view
       relationships:
         parent_target_id:
           id: parent_target_id
@@ -304,6 +316,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
+      enabled: true
     cache_metadata:
       max-age: -1
       contexts:
