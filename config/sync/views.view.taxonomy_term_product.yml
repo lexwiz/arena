@@ -879,7 +879,7 @@ display:
           plugin_id: taxonomy_entity_index_tid_depth
       display_extenders: {  }
       css_class: ''
-      use_ajax: true
+      use_ajax: false
       filter_groups:
         operator: AND
         groups:

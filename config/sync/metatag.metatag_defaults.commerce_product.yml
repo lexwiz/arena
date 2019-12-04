@@ -1,0 +1,10 @@
+uuid: be3808bf-d754-4e94-9513-f28e2042699c
+langcode: ru
+status: true
+dependencies: {  }
+id: commerce_product
+label: Товар
+tags:
+  canonical_url: '[commerce_product:url]'
+  description: '[commerce_product:body]'
+  title: '[commerce_product:title] | [site:name]'
