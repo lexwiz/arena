@@ -17,25 +17,20 @@ bundle: default
 mode: default
 content:
   purchased_entity:
-    type: entity_reference_autocomplete
+    type: entity_reference_autocomplete_tags
     weight: 0
     settings:
-      match_operator: CONTAINS
+      match_operator: STARTS_WITH
       size: 60
       placeholder: ''
     third_party_settings: {  }
     region: content
   quantity:
-    type: xnumber
+    type: commerce_quantity
     weight: 1
     settings:
       placeholder: ''
       step: '1'
-      min: '1'
-      max: ''
-      default_value: '1'
-      prefix: ''
-      suffix: ''
     third_party_settings: {  }
     region: content
   unit_price:
