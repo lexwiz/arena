@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2596ae9099225e6793418fc6d1af9392",
+    "content-hash": "549e75fe776d8f4bc8c18c4ece401e3c",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3321,17 +3321,17 @@
         },
         {
             "name": "drupal/commerce_quantity_increments",
-            "version": "2.1.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/commerce_quantity_increments.git",
-                "reference": "8.x-2.1"
+                "reference": "8.x-2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/commerce_quantity_increments-8.x-2.1.zip",
-                "reference": "8.x-2.1",
-                "shasum": "20f518e285d007f235a4a1c1693f43c8179b1938"
+                "url": "https://ftp.drupal.org/files/projects/commerce_quantity_increments-8.x-2.0.zip",
+                "reference": "8.x-2.0",
+                "shasum": "d6253b3daf3da348edb9d1872e0719a53123b3fa"
             },
             "require": {
                 "drupal/commerce": "~2.0",
@@ -3344,7 +3344,7 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.1",
+                    "version": "8.x-2.0",
                     "datestamp": "1575453184",
                     "security-coverage": {
                         "status": "covered",
