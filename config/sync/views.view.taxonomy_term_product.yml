@@ -866,7 +866,7 @@ display:
           specify_validation: true
           validate:
             type: 'entity:taxonomy_term'
-            fail: empty
+            fail: 'not found'
           validate_options:
             access: true
             operation: view

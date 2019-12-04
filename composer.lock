@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "549e75fe776d8f4bc8c18c4ece401e3c",
+    "content-hash": "7ab2be6fdf395605ea26283025e14ff4",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -6191,17 +6191,17 @@
         },
         {
             "name": "drupal/taxonomy_entity_index",
-            "version": "1.0.0-alpha2",
+            "version": "1.0.0-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/taxonomy_entity_index.git",
-                "reference": "8.x-1.0-alpha2"
+                "reference": "8.x-1.0-alpha1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/taxonomy_entity_index-8.x-1.0-alpha2.zip",
-                "reference": "8.x-1.0-alpha2",
-                "shasum": "170e3ca5ae4d6ce822f7df0cd16d4600c1c1010c"
+                "url": "https://ftp.drupal.org/files/projects/taxonomy_entity_index-8.x-1.0-alpha1.zip",
+                "reference": "8.x-1.0-alpha1",
+                "shasum": "951231848dcdef539cab73074810961b4eb799e8"
             },
             "require": {
                 "drupal/core": "*"
@@ -6212,7 +6212,7 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha2",
+                    "version": "8.x-1.0-alpha1",
                     "datestamp": "1575415088",
                     "security-coverage": {
                         "status": "not-covered",
