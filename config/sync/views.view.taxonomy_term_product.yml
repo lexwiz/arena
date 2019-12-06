@@ -25,7 +25,6 @@ description: ''
 tag: ''
 base_table: commerce_product_field_data
 base_field: product_id
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -599,6 +598,8 @@ display:
           id: status
           expose:
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
           group: 1
         field_stock_value:
           id: field_stock_value
@@ -629,6 +630,8 @@ display:
             placeholder: null
             min_placeholder: null
             max_placeholder: null
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: true
           group_info:
             label: 'В наличии'
@@ -686,6 +689,8 @@ display:
               discount_7: '0'
               discount_10: '0'
             reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -734,6 +739,8 @@ display:
               discount_7: '0'
               discount_10: '0'
             reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''

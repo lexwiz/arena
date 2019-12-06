@@ -24,7 +24,6 @@ description: ''
 tag: commerce_cart_block
 base_table: commerce_order
 base_field: order_id
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -480,6 +479,8 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
