@@ -3,21 +3,19 @@ langcode: ru
 status: false
 dependencies:
   config:
-    - commerce_product.commerce_product_type.default
-    - core.entity_view_mode.commerce_product.token
-    - field.field.commerce_product.default.body
-    - field.field.commerce_product.default.feeds_item
-    - field.field.commerce_product.default.field_brand
-    - field.field.commerce_product.default.field_catalog
-    - field.field.commerce_product.default.field_code
-    - field.field.commerce_product.default.field_country
-    - field.field.commerce_product.default.field_package
-    - field.field.commerce_product.default.field_photo
-    - field.field.commerce_product.default.field_property
-    - field.field.commerce_product.default.field_tags
-    - field.field.commerce_product.default.stores
-    - field.field.commerce_product.default.variations
-    - image.style.large
+    0: commerce_product.commerce_product_type.default
+    1: core.entity_view_mode.commerce_product.token
+    2: field.field.commerce_product.default.body
+    3: field.field.commerce_product.default.feeds_item
+    4: field.field.commerce_product.default.field_brand
+    5: field.field.commerce_product.default.field_catalog
+    6: field.field.commerce_product.default.field_code
+    7: field.field.commerce_product.default.field_country
+    8: field.field.commerce_product.default.field_package
+    9: field.field.commerce_product.default.field_photo
+    10: field.field.commerce_product.default.field_property
+    11: field.field.commerce_product.default.field_tags
+    14: image.style.large
   module:
     - commerce_product
     - media

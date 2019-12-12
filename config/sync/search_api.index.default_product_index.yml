@@ -6,12 +6,11 @@ dependencies:
     - commerce_product
     - search_api
   config:
-    - field.storage.commerce_product.variations
-    - field.storage.commerce_product_variation.field_stock
-    - field.storage.commerce_product_variation.field_sku_m
-    - field.storage.commerce_product_variation.field_barcode
-    - field.storage.commerce_product.field_code
-    - search_api.server.default_server
+    1: field.storage.commerce_product_variation.field_stock
+    2: field.storage.commerce_product_variation.field_sku_m
+    3: field.storage.commerce_product_variation.field_barcode
+    4: field.storage.commerce_product.field_code
+    5: search_api.server.default_server
 id: default_product_index
 name: 'Default product index'
 description: ''

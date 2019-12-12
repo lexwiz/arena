@@ -13,8 +13,6 @@ dependencies:
     - field.field.commerce_product.default.field_package
     - field.field.commerce_product.default.field_photo
     - field.field.commerce_product.default.field_property
-    - field.field.commerce_product.default.stores
-    - field.field.commerce_product.default.variations
   module:
     - commerce_feeds
     - commerce_product

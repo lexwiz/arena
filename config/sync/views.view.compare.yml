@@ -3,15 +3,14 @@ langcode: ru
 status: true
 dependencies:
   config:
-    - field.storage.commerce_product.field_brand
-    - field.storage.commerce_product.field_code
-    - field.storage.commerce_product.field_country
-    - field.storage.commerce_product.field_photo
-    - field.storage.commerce_product.field_property
-    - field.storage.commerce_product.variations
-    - flag.flag.compare
-    - image.style.medium
-    - system.menu.account
+    0: field.storage.commerce_product.field_brand
+    1: field.storage.commerce_product.field_code
+    2: field.storage.commerce_product.field_country
+    3: field.storage.commerce_product.field_photo
+    4: field.storage.commerce_product.field_property
+    6: flag.flag.compare
+    7: image.style.medium
+    8: system.menu.account
   module:
     - commerce_product
     - flag
@@ -283,7 +282,7 @@ display:
         variations:
           id: variations
           table: commerce_product__variations
-          field: variations
+          field: variations_target_id
           relationship: none
           group_type: group
           admin_label: ''

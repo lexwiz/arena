@@ -3,14 +3,13 @@ langcode: ru
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.commerce_product.teaser
-    - field.storage.commerce_product.field_code
-    - field.storage.commerce_product.field_photo
-    - field.storage.commerce_product.field_tags
-    - field.storage.commerce_product.variations
-    - image.style.large
-    - system.menu.main
-    - taxonomy.vocabulary.tags
+    0: core.entity_view_mode.commerce_product.teaser
+    1: field.storage.commerce_product.field_code
+    2: field.storage.commerce_product.field_photo
+    3: field.storage.commerce_product.field_tags
+    5: image.style.large
+    6: system.menu.main
+    7: taxonomy.vocabulary.tags
   content:
     - 'taxonomy_term:tags:09a4e672-a9f8-48ad-8146-8fc8c8dcfb0a'
     - 'taxonomy_term:tags:5359fe9b-251e-4646-bf6f-09eebe5d6325'
@@ -355,7 +354,7 @@ display:
         variations:
           id: variations
           table: commerce_product__variations
-          field: variations
+          field: variations_target_id
           relationship: none
           group_type: group
           admin_label: ''

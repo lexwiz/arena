@@ -3,14 +3,13 @@ langcode: ru
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.commerce_product.teaser
-    - field.storage.commerce_product.field_brand
-    - field.storage.commerce_product.field_code
-    - field.storage.commerce_product.field_country
-    - field.storage.commerce_product.field_photo
-    - field.storage.commerce_product.field_tags
-    - field.storage.commerce_product.variations
-    - views.view.child_categories
+    0: core.entity_view_mode.commerce_product.teaser
+    1: field.storage.commerce_product.field_brand
+    2: field.storage.commerce_product.field_code
+    3: field.storage.commerce_product.field_country
+    4: field.storage.commerce_product.field_photo
+    5: field.storage.commerce_product.field_tags
+    7: views.view.child_categories
   module:
     - better_exposed_filters
     - commerce_product
@@ -401,7 +400,7 @@ display:
         variations:
           id: variations
           table: commerce_product__variations
-          field: variations
+          field: variations_target_id
           relationship: none
           group_type: group
           admin_label: ''
@@ -832,12 +831,14 @@ display:
         variations:
           id: variations
           table: commerce_product__variations
-          field: variations
+          field: variations_target_id
           relationship: none
           group_type: group
           admin_label: 'variations: Product variation'
           required: false
           plugin_id: standard
+          entity_type: commerce_product
+          entity_field: variations
       arguments:
         taxonomy_entity_index_tid_depth:
           id: taxonomy_entity_index_tid_depth

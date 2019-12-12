@@ -6,7 +6,6 @@ dependencies:
     - commerce_order.commerce_order_type.default
     - core.entity_form_mode.commerce_order.checkout
     - field.field.commerce_order.default.field_comment_order
-    - field.field.commerce_order.default.order_items
 _core:
   default_config_hash: Br0BiFVvdCJWLskqoMDvCxXmAhyoP7RyOTuSVM-4aKE
 id: commerce_order.default.checkout

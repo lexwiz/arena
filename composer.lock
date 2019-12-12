@@ -2720,17 +2720,17 @@
         },
         {
             "name": "drupal/commerce",
-            "version": "2.15.0",
+            "version": "2.16.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/commerce.git",
-                "reference": "8.x-2.15"
+                "reference": "8.x-2.16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/commerce-8.x-2.15.zip",
-                "reference": "8.x-2.15",
-                "shasum": "935f40a5f9a36425109b4e3acb182e7a8d1d158f"
+                "url": "https://ftp.drupal.org/files/projects/commerce-8.x-2.16.zip",
+                "reference": "8.x-2.16",
+                "shasum": "9c3297f4f18d1276bd76d2129aac3b4476dc5db5"
             },
             "require": {
                 "commerceguys/intl": "^1.0.0",
@@ -2764,8 +2764,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.15",
-                    "datestamp": "1573079392",
+                    "version": "8.x-2.16",
+                    "datestamp": "1576074180",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2805,7 +2805,7 @@
         },
         {
             "name": "drupal/commerce_cart",
-            "version": "2.15.0",
+            "version": "2.16.0",
             "require": {
                 "drupal/commerce": "self.version",
                 "drupal/commerce_order": "*",
@@ -2818,8 +2818,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.15",
-                    "datestamp": "1573065185",
+                    "version": "8.x-2.16",
+                    "datestamp": "1576074180",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2856,7 +2856,7 @@
         },
         {
             "name": "drupal/commerce_checkout",
-            "version": "2.15.0",
+            "version": "2.16.0",
             "require": {
                 "drupal/commerce": "self.version",
                 "drupal/commerce_cart": "*",
@@ -2869,8 +2869,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.15",
-                    "datestamp": "1573065185",
+                    "version": "8.x-2.16",
+                    "datestamp": "1576074180",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3030,7 +3030,7 @@
         },
         {
             "name": "drupal/commerce_number_pattern",
-            "version": "2.15.0",
+            "version": "2.16.0",
             "require": {
                 "drupal/commerce": "self.version",
                 "drupal/commerce_store": "*",
@@ -3042,8 +3042,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.15",
-                    "datestamp": "1573065185",
+                    "version": "8.x-2.16",
+                    "datestamp": "1576074180",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3080,7 +3080,7 @@
         },
         {
             "name": "drupal/commerce_order",
-            "version": "2.15.0",
+            "version": "2.16.0",
             "require": {
                 "drupal/commerce": "self.version",
                 "drupal/commerce_number_pattern": "*",
@@ -3097,8 +3097,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.15",
-                    "datestamp": "1573065185",
+                    "version": "8.x-2.16",
+                    "datestamp": "1576074180",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3135,7 +3135,7 @@
         },
         {
             "name": "drupal/commerce_price",
-            "version": "2.15.0",
+            "version": "2.16.0",
             "require": {
                 "drupal/commerce": "self.version",
                 "drupal/core": "~8.0"
@@ -3146,8 +3146,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.15",
-                    "datestamp": "1573065185",
+                    "version": "8.x-2.16",
+                    "datestamp": "1576074180",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3184,7 +3184,7 @@
         },
         {
             "name": "drupal/commerce_product",
-            "version": "2.15.0",
+            "version": "2.16.0",
             "require": {
                 "drupal/commerce": "self.version",
                 "drupal/commerce_price": "*",
@@ -3197,8 +3197,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.15",
-                    "datestamp": "1573065185",
+                    "version": "8.x-2.16",
+                    "datestamp": "1576074180",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3235,7 +3235,7 @@
         },
         {
             "name": "drupal/commerce_promotion",
-            "version": "2.15.0",
+            "version": "2.16.0",
             "require": {
                 "drupal/commerce": "self.version",
                 "drupal/commerce_order": "*",
@@ -3247,8 +3247,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.15",
-                    "datestamp": "1573065185",
+                    "version": "8.x-2.16",
+                    "datestamp": "1576074180",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3334,7 +3334,7 @@
         },
         {
             "name": "drupal/commerce_store",
-            "version": "2.15.0",
+            "version": "2.16.0",
             "require": {
                 "drupal/commerce": "self.version",
                 "drupal/commerce_price": "*",
@@ -3346,8 +3346,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.15",
-                    "datestamp": "1573065185",
+                    "version": "8.x-2.16",
+                    "datestamp": "1576074180",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7894,16 +7894,16 @@
         },
         {
             "name": "pear/pear_exception",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pear/PEAR_Exception.git",
-                "reference": "8c18719fdae000b690e3912be401c76e406dd13b"
+                "reference": "dbb42a5a0e45f3adcf99babfb2a1ba77b8ac36a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pear/PEAR_Exception/zipball/8c18719fdae000b690e3912be401c76e406dd13b",
-                "reference": "8c18719fdae000b690e3912be401c76e406dd13b",
+                "url": "https://api.github.com/repos/pear/PEAR_Exception/zipball/dbb42a5a0e45f3adcf99babfb2a1ba77b8ac36a7",
+                "reference": "dbb42a5a0e45f3adcf99babfb2a1ba77b8ac36a7",
                 "shasum": ""
             },
             "require": {
@@ -7919,9 +7919,9 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "PEAR": ""
-                }
+                "classmap": [
+                    "PEAR/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "include-path": [
@@ -7945,7 +7945,7 @@
             "keywords": [
                 "exception"
             ],
-            "time": "2015-02-10T20:07:52+00:00"
+            "time": "2019-12-10T10:24:42+00:00"
         },
         {
             "name": "psr/container",
@@ -10902,16 +10902,16 @@
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.2.4",
+            "version": "1.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "10bb96592168a0f8e8f6dcde3532d9fa50b0b527"
+                "reference": "62e8fc2dc550e5d6d8c9360c7721662670f58149"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/10bb96592168a0f8e8f6dcde3532d9fa50b0b527",
-                "reference": "10bb96592168a0f8e8f6dcde3532d9fa50b0b527",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/62e8fc2dc550e5d6d8c9360c7721662670f58149",
+                "reference": "62e8fc2dc550e5d6d8c9360c7721662670f58149",
                 "shasum": ""
             },
             "require": {
@@ -10922,7 +10922,7 @@
             "require-dev": {
                 "phpunit/phpunit": "^4.8.35 || ^5.7 || 6.5 - 8",
                 "psr/log": "^1.0",
-                "symfony/process": "^2.5 || ^3.0 || ^4.0"
+                "symfony/process": "^2.5 || ^3.0 || ^4.0 || ^5.0"
             },
             "type": "library",
             "extra": {
@@ -10954,7 +10954,7 @@
                 "ssl",
                 "tls"
             ],
-            "time": "2019-08-30T08:44:50+00:00"
+            "time": "2019-12-11T14:44:42+00:00"
         },
         {
             "name": "composer/composer",

@@ -1662,12 +1662,14 @@ display:
         variations:
           id: variations
           table: commerce_product__variations
-          field: variations
+          field: variations_target_id
           relationship: none
           group_type: group
           admin_label: 'variations: Product variation'
           required: false
           plugin_id: standard
+          entity_type: commerce_product
+          entity_field: variations
       arguments: {  }
       display_extenders: {  }
       filter_groups:

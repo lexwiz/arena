@@ -15,8 +15,6 @@ dependencies:
     - field.field.commerce_product.default.field_photo
     - field.field.commerce_product.default.field_property
     - field.field.commerce_product.default.field_tags
-    - field.field.commerce_product.default.stores
-    - field.field.commerce_product.default.variations
 _core:
   default_config_hash: DHMMWJMEbb7XBsxisOTa1KZq6s0GLOpjyL1wijGEL7k
 id: commerce_product.default.bulk_edit

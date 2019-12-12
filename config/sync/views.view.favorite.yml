@@ -3,16 +3,15 @@ langcode: ru
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.commerce_product.teaser
-    - field.storage.commerce_product.field_code
-    - field.storage.commerce_product.field_photo
-    - field.storage.commerce_product.field_tags
-    - field.storage.commerce_product.variations
-    - flag.flag.favorite
-    - image.style.large
-    - system.menu.account
-    - user.role.administrator
-    - user.role.authenticated
+    0: core.entity_view_mode.commerce_product.teaser
+    1: field.storage.commerce_product.field_code
+    2: field.storage.commerce_product.field_photo
+    3: field.storage.commerce_product.field_tags
+    5: flag.flag.favorite
+    6: image.style.large
+    7: system.menu.account
+    8: user.role.administrator
+    9: user.role.authenticated
   module:
     - commerce_product
     - flag
@@ -355,7 +354,7 @@ display:
         variations:
           id: variations
           table: commerce_product__variations
-          field: variations
+          field: variations_target_id
           relationship: none
           group_type: group
           admin_label: ''
