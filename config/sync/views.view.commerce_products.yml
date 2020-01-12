@@ -97,13 +97,77 @@ display:
           summary: ''
           description: ''
           columns:
-            title: title
-            type: type
+            views_bulk_operations_bulk_form: views_bulk_operations_bulk_form
             status: status
+            field_code_stock: field_code_stock
+            field_code: field_code
+            field_photo: field_photo
+            title: title
+            field_sku_m: field_sku_m
+            field_stock: field_stock
+            price__number: price__number
+            type: type
+            field_catalog: field_catalog
+            field_brand: field_brand
             changed: changed
+            field_tags: field_tags
             operations: operations
           info:
+            views_bulk_operations_bulk_form:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            status:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_code_stock:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_code:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_photo:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
             title:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_sku_m:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_stock:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            price__number:
               sortable: true
               default_sort_order: asc
               align: ''
@@ -117,8 +181,13 @@ display:
               separator: ''
               empty_column: true
               responsive: ''
-            status:
-              sortable: true
+            field_catalog:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_brand:
+              sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
@@ -131,9 +200,12 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
+            field_tags:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
             operations:
-              sortable: false
-              default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
@@ -1701,7 +1773,8 @@ display:
     display_title: Page
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       path: admin/commerce/products
     cache_metadata:
       contexts:

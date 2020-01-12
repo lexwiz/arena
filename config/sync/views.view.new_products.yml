@@ -3,11 +3,11 @@ langcode: ru
 status: true
 dependencies:
   config:
-    0: core.entity_view_mode.commerce_product.teaser
-    1: field.storage.commerce_product.field_code
-    2: field.storage.commerce_product.field_photo
-    3: field.storage.commerce_product.field_tags
-    5: image.style.large
+    - core.entity_view_mode.commerce_product.teaser
+    - field.storage.commerce_product.field_code
+    - field.storage.commerce_product.field_photo
+    - field.storage.commerce_product.field_tags
+    - image.style.large
   module:
     - commerce_product
     - media
@@ -87,7 +87,7 @@ display:
         type: 'entity:commerce_product'
         options:
           relationship: none
-          view_mode: default
+          view_mode: teaser
       fields:
         title:
           id: title
@@ -456,7 +456,6 @@ display:
         - 'config:field.storage.commerce_product.field_code'
         - 'config:field.storage.commerce_product.field_photo'
         - 'config:field.storage.commerce_product.field_tags'
-        - 'config:field.storage.commerce_product.variations'
   block_1:
     display_plugin: block
     id: block_1
@@ -520,14 +519,14 @@ display:
         - 'config:field.storage.commerce_product.field_code'
         - 'config:field.storage.commerce_product.field_photo'
         - 'config:field.storage.commerce_product.field_tags'
-        - 'config:field.storage.commerce_product.variations'
   page_1:
     display_plugin: page
     id: page_1
     display_title: Page
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       path: new-products
     cache_metadata:
       max-age: -1
@@ -539,4 +538,3 @@ display:
         - 'config:field.storage.commerce_product.field_code'
         - 'config:field.storage.commerce_product.field_photo'
         - 'config:field.storage.commerce_product.field_tags'
-        - 'config:field.storage.commerce_product.variations'
