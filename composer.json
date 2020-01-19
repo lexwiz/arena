@@ -29,7 +29,7 @@
         "drupal/commerce": "^2.14",
         "drupal/commerce_checkout_order_fields": "^1.0",
         "drupal/commerce_feeds": "^1.0",
-        "drupal/commerce_quantity_increments": "^2.2",
+        "drupal/commerce_quantity_increments": "2.0",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.7",
         "drupal/devel": "^2.1",
