@@ -3,15 +3,15 @@ langcode: ru
 status: true
 dependencies:
   config:
-    0: core.entity_view_mode.commerce_product.teaser
-    1: field.storage.commerce_product.field_code
-    2: field.storage.commerce_product.field_photo
-    3: field.storage.commerce_product.field_tags
-    5: flag.flag.favorite
-    6: image.style.large
-    7: system.menu.account
-    8: user.role.administrator
-    9: user.role.authenticated
+    - core.entity_view_mode.commerce_product.teaser
+    - field.storage.commerce_product.field_code
+    - field.storage.commerce_product.field_photo
+    - field.storage.commerce_product.field_tags
+    - flag.flag.favorite
+    - image.style.large
+    - system.menu.account
+    - user.role.administrator
+    - user.role.authenticated
   module:
     - commerce_product
     - flag
@@ -60,12 +60,17 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: mini
+        type: full
         options:
           items_per_page: 20
           offset: 0
           id: 0
           total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« первая'
+            last: 'последняя »'
           expose:
             items_per_page: false
             items_per_page_label: 'Показать по'
@@ -74,9 +79,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
+          quantity: 9
       style:
         type: views_bootstrap_grid
         options:
@@ -460,14 +463,14 @@ display:
         - 'config:field.storage.commerce_product.field_code'
         - 'config:field.storage.commerce_product.field_photo'
         - 'config:field.storage.commerce_product.field_tags'
-        - 'config:field.storage.commerce_product.variations'
   page_1:
     display_plugin: page
     id: page_1
     display_title: Page
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       path: favorite
       menu:
         type: normal
@@ -489,4 +492,3 @@ display:
         - 'config:field.storage.commerce_product.field_code'
         - 'config:field.storage.commerce_product.field_photo'
         - 'config:field.storage.commerce_product.field_tags'
-        - 'config:field.storage.commerce_product.variations'
