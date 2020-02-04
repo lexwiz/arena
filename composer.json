@@ -27,6 +27,7 @@
         "drupal/bootstrap": "^3.20",
         "drupal/bootstrap_basic_image_gallery": "1.x-dev",
         "drupal/commerce": "^2.14",
+        "drupal/commerce_addtocart_ajax": "^1.0",
         "drupal/commerce_checkout_order_fields": "^1.0",
         "drupal/commerce_feeds": "^1.0",
         "drupal/commerce_quantity_increments": "2.0",
@@ -74,7 +75,6 @@
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {
-        "webflo/drupal-core-require-dev": "^8.6.0"
     },
     "conflict": {
         "drupal/drupal": "*"
