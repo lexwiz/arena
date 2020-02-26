@@ -121,23 +121,8 @@ display:
           clear_on_exposed: false
           action_title: Action
           selected_actions:
-            comment_delete_action: 0
-            commerce_unpublish_product: 0
-            commerce_publish_product: 0
-            'entity_delete_action:commerce_product': 0
-            'flag_action:favorite_flag': 0
-            'flag_action:favorite_unflag': 0
-            views_bulk_edit: views_bulk_edit
-            views_bulk_operations_delete_entity: 0
-            pathauto_update_alias: 0
-            'entity:unpublish_action:commerce_product': 0
-            'entity:publish_action:commerce_product': 0
-            'entity:save_action:commerce_product': 0
-            'entity:delete_action:commerce_product': 0
-          preconfiguration:
-            views_bulk_edit:
-              label_override: ''
-              get_bundles_from_results: 1
+            -
+              action_id: views_bulk_edit
           plugin_id: views_bulk_operations_bulk_form
         title:
           table: commerce_product_field_data

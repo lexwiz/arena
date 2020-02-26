@@ -159,16 +159,8 @@ display:
           clear_on_exposed: false
           action_title: Action
           selected_actions:
-            comment_delete_action: 0
-            views_bulk_edit: 0
-            views_bulk_operations_delete_entity: views_bulk_operations_delete_entity
-            pathauto_update_alias: 0
-            'entity:unpublish_action:commerce_product_variation': 0
-            'entity:publish_action:commerce_product_variation': 0
-            'entity:save_action:commerce_product_variation': 0
-          preconfiguration:
-            views_bulk_operations_delete_entity:
-              label_override: ''
+            -
+              action_id: views_bulk_operations_delete_entity
           plugin_id: views_bulk_operations_bulk_form
         title:
           table: commerce_product_variation_field_data
