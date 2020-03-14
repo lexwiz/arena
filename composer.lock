@@ -4297,23 +4297,23 @@
         },
         {
             "name": "drupal/entity_reference_revisions",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/entity_reference_revisions.git",
-                "reference": "8.x-1.7"
+                "reference": "8.x-1.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.7.zip",
-                "reference": "8.x-1.7",
-                "shasum": "4e3b849b0d984cd3c0a4330c9aa4cb16bf1f79f6"
+                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.8.zip",
+                "reference": "8.x-1.8",
+                "shasum": "c1279e6c683edc2dbccedba8de1505340c8a62b6"
             },
             "require": {
-                "drupal/core": "~8.0"
+                "drupal/core": "^8.7.7 || ^9"
             },
             "require-dev": {
-                "drupal/diff": "*"
+                "drupal/diff": "1.x-dev"
             },
             "type": "drupal-module",
             "extra": {
@@ -4321,8 +4321,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.7",
-                    "datestamp": "1570284187",
+                    "version": "8.x-1.8",
+                    "datestamp": "1583961846",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4331,7 +4331,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0"
             ],
             "authors": [
                 {
@@ -4351,7 +4351,7 @@
                     "homepage": "https://www.drupal.org/user/227761"
                 }
             ],
-            "description": "Adds a Entity Reference field type with revision support.",
+            "description": "Entity Reference Revisions",
             "homepage": "https://www.drupal.org/project/entity_reference_revisions",
             "support": {
                 "source": "https://git.drupalcode.org/project/entity_reference_revisions"
@@ -6057,10 +6057,10 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/super_login.git",
-                "reference": "fd1211996f0fc062718fd599883c9ebf969008e8"
+                "reference": "eb203357a3be4e0cdbdf87260bdab1a5db53805a"
             },
             "require": {
-                "drupal/core": "~8.0"
+                "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
@@ -6068,8 +6068,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.2+3-dev",
-                    "datestamp": "1565029986",
+                    "version": "8.x-1.2+4-dev",
+                    "datestamp": "1571686685",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -6091,7 +6091,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/super_login"
             },
-            "time": "2019-10-21T19:33:22+00:00"
+            "time": "2020-03-09T14:46:46+00:00"
         },
         {
             "name": "drupal/swiftmailer",
@@ -6395,7 +6395,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/token.git",
-                "reference": "a3d050199c67345a2283809deeb4746128616c9a"
+                "reference": "2dd0b4ea16bed51a39657a601fc28aae5e4aeb77"
             },
             "require": {
                 "drupal/core": "^8.7.7 || ^9"
@@ -6406,8 +6406,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.5+22-dev",
-                    "datestamp": "1576222685",
+                    "version": "8.x-1.5+23-dev",
+                    "datestamp": "1576225384",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -6454,24 +6454,24 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/token"
             },
-            "time": "2019-12-13T08:18:59+00:00"
+            "time": "2020-03-09T21:49:54+00:00"
         },
         {
             "name": "drupal/twig_tweak",
-            "version": "2.4.0",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/twig_tweak.git",
-                "reference": "8.x-2.4"
+                "reference": "8.x-2.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/twig_tweak-8.x-2.4.zip",
-                "reference": "8.x-2.4",
-                "shasum": "fa175b46d2b69ce0f30344579a5861169c8467a4"
+                "url": "https://ftp.drupal.org/files/projects/twig_tweak-8.x-2.5.zip",
+                "reference": "8.x-2.5",
+                "shasum": "077e193192d85706f5c5afc7575ba07b41499f79"
             },
             "require": {
-                "drupal/core": "^8.7"
+                "drupal/core": "^8.7 || ^9.0"
             },
             "suggest": {
                 "symfony/var-dumper": "Better dump() function for debugging Twig variables"
@@ -6482,8 +6482,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.4",
-                    "datestamp": "1563099329",
+                    "version": "8.x-2.5",
+                    "datestamp": "1583937566",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
