@@ -55,8 +55,8 @@ content:
     weight: 1
     settings:
       override_labels: true
-      label_singular: 'order item'
-      label_plural: 'order items'
+      label_singular: 'позиция заказа'
+      label_plural: 'позиции заказа'
       allow_new: true
       match_operator: CONTAINS
       allow_existing: false
