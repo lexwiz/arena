@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a11db2f16050e9fe03e380cd025ae3fe",
+    "content-hash": "68c662107f2c964c0fa7a6376ddd81bf",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2339,65 +2339,6 @@
             }
         },
         {
-            "name": "drupal/ajax_add_to_cart",
-            "version": "dev-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/ajax_add_to_cart.git",
-                "reference": "01c7eb55d95d18941f9478545b30feb4e1ca8ff5"
-            },
-            "require": {
-                "drupal/commerce": "~2.0",
-                "drupal/core": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0+9-dev",
-                    "datestamp": "1564827784",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
-                    }
-                },
-                "patches_applied": {
-                    "Not compatible with product attributes": "https://www.drupal.org/files/issues/2019-08-27/ajax_add_to_cart-compatibility-product-attributes-3077349-2.patch",
-                    "ajax error when click add to cart": "https://www.drupal.org/files/issues/2019-11-21/3026540-messages-6.patch",
-                    "Cleanup of AjaxHelper": "https://www.drupal.org/files/issues/2019-11-22/3096331-ajax-helper-cleanup-2.patch",
-                    "Cleanup of form": "https://www.drupal.org/files/issues/2019-11-23/3096373-ajax-form-cleanup-2.patch",
-                    "Allow theming of modal": "https://www.drupal.org/files/issues/2019-11-23/2933198-use-theme-function-2.patch",
-                    "Allow non-modal popups": "https://www.drupal.org/files/issues/2019-11-23/3096402-popup-adjustments-2.patch"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Shamsher_Alam",
-                    "homepage": "https://www.drupal.org/user/2742027"
-                },
-                {
-                    "name": "pen",
-                    "homepage": "https://www.drupal.org/user/2435634"
-                }
-            ],
-            "description": "Add ajax add to cart functionality.",
-            "homepage": "https://www.drupal.org/project/ajax_add_to_cart",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/ajax_add_to_cart",
-                "issues": "https://www.drupal.org/project/issues/ajax_add_to_cart"
-            },
-            "time": "2019-08-07T16:59:22+00:00"
-        },
-        {
             "name": "drupal/better_exposed_filters",
             "version": "3.0.0-alpha6",
             "source": {
@@ -2462,26 +2403,29 @@
         },
         {
             "name": "drupal/block_class",
-            "version": "dev-1.x",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/block_class.git",
-                "reference": "41d659b869deaef5a626deacde0e0543508d960e"
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/block_class-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "e16ad58dcaf694e460c2ad581c3eb3c8bd0a095b"
             },
             "require": {
-                "drupal/core": "*"
+                "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.1+1-dev",
-                    "datestamp": "1575060484",
+                    "version": "8.x-1.2",
+                    "datestamp": "1588263516",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -2552,8 +2496,7 @@
                 "source": "https://git.drupalcode.org/project/block_class",
                 "issues": "https://www.drupal.org/project/issues/block_class",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
-            },
-            "time": "2020-04-07T16:47:56+00:00"
+            }
         },
         {
             "name": "drupal/bootstrap",
@@ -2810,55 +2753,6 @@
             "homepage": "http://drupal.org/project/commerce",
             "support": {
                 "source": "https://git.drupalcode.org/project/commerce"
-            }
-        },
-        {
-            "name": "drupal/commerce_addtocart_ajax",
-            "version": "1.0.0-alpha1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/commerce_addtocart_ajax.git",
-                "reference": "8.x-1.0-alpha1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/commerce_addtocart_ajax-8.x-1.0-alpha1.zip",
-                "reference": "8.x-1.0-alpha1",
-                "shasum": "4a35e5d7e6b07b171ec9cf8e70122e3371b1234a"
-            },
-            "require": {
-                "drupal/commerce": "*",
-                "drupal/commerce_cart": "*",
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-alpha1",
-                    "datestamp": "1580419374",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "GoZ",
-                    "homepage": "https://www.drupal.org/user/226961"
-                }
-            ],
-            "description": "Ajaxify the add to cart form from Commerce cart module.",
-            "homepage": "https://www.drupal.org/project/commerce_addtocart_ajax",
-            "support": {
-                "source": "https://git.drupalcode.org/project/commerce_addtocart_ajax"
             }
         },
         {
@@ -6335,26 +6229,29 @@
         },
         {
             "name": "drupal/token",
-            "version": "dev-1.x",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/token.git",
-                "reference": "40e376544f816da37b7483164ce942bd676ecca9"
+                "reference": "8.x-1.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/token-8.x-1.7.zip",
+                "reference": "8.x-1.7",
+                "shasum": "c7e3a3757282e4c94e3c1fff08d01e22155cb853"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9"
+                "drupal/core": "^8.7.7 || ^9"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.6+2-dev",
-                    "datestamp": "1586203154",
+                    "version": "8.x-1.7",
+                    "datestamp": "1587893588",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "drush": {
@@ -6397,8 +6294,7 @@
             "homepage": "https://www.drupal.org/project/token",
             "support": {
                 "source": "https://git.drupalcode.org/project/token"
-            },
-            "time": "2020-04-27T20:08:31+00:00"
+            }
         },
         {
             "name": "drupal/twig_tweak",
@@ -10669,14 +10565,11 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/ajax_add_to_cart": 20,
-        "drupal/block_class": 20,
         "drupal/bootstrap_basic_image_gallery": 20,
         "drupal/flag": 20,
         "drupal/product_taxonomy_filter": 20,
         "drupal/super_login": 20,
         "drupal/swiftmailer": 20,
-        "drupal/token": 20,
         "drupal/views_bootstrap": 20,
         "drupal/views_field_view": 20
     },
