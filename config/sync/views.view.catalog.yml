@@ -8,7 +8,6 @@ dependencies:
   module:
     - taxonomy
     - user
-    - views_field_view
 id: catalog
 label: Catalog
 module: views
@@ -191,18 +190,18 @@ display:
           entity_type: taxonomy_term
           entity_field: name
           plugin_id: term_name
-        view:
-          id: view
+        nothing:
+          id: nothing
           table: views
-          field: view
+          field: nothing
           relationship: none
           group_type: group
           admin_label: ''
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "{% set termid = tid|render|striptags %}\r\n{{ drupal_view('child_categories', 'block_1', termid) }}"
             make_link: false
             path: ''
             absolute: false
@@ -238,11 +237,8 @@ display:
           empty: ''
           hide_empty: false
           empty_zero: false
-          hide_alter_empty: true
-          view: child_categories
-          display: block_1
-          arguments: '{{ raw_fields.tid }}'
-          plugin_id: view
+          hide_alter_empty: false
+          plugin_id: custom
       filters:
         status:
           value: '1'

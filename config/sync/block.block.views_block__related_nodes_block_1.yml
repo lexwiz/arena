@@ -1,22 +1,22 @@
-uuid: 3838301d-8757-48fd-9ad5-e6b2b5e5878b
+uuid: 7c2ed14a-919e-402c-9684-30248101d78a
 langcode: ru
 status: true
 dependencies:
   config:
-    - views.view.related_nodes_main
+    - views.view.related_nodes
   module:
     - system
     - views
   theme:
     - kanzarena
-id: views_block__related_nodes_main_block_1
+id: views_block__related_nodes_block_1
 theme: kanzarena
 region: content
-weight: 0
+weight: -6
 provider: null
-plugin: 'views_block:related_nodes_main-block_1'
+plugin: 'views_block:related_nodes-block_1'
 settings:
-  id: 'views_block:related_nodes_main-block_1'
+  id: 'views_block:related_nodes-block_1'
   label: 'Похожие товары'
   provider: views
   label_display: visible

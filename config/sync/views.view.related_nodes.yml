@@ -48,7 +48,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 8
+          items_per_page: 6
           offset: 0
       style:
         type: views_bootstrap_grid
@@ -57,11 +57,11 @@ display:
           default_row_class: false
           uses_fields: false
           alignment: horizontal
-          columns: '4'
+          columns: '3'
           col_xs: col-xs-12
           col_sm: col-sm-6
-          col_md: col-md-3
-          col_lg: col-lg-3
+          col_md: col-md-4
+          col_lg: col-lg-4
       row:
         type: 'entity:commerce_product'
         options:
@@ -253,7 +253,8 @@ display:
     display_title: Block
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
     cache_metadata:
       max-age: -1
       contexts:
