@@ -17,8 +17,6 @@ popup_bg_hex: d94a00
 popup_clicking_confirmation: false
 popup_scrolling_confirmation: false
 popup_delay: 1000
-show_disagree_button: true
-popup_disagree_button_message: Подробнее
 popup_enabled: true
 popup_find_more_button_message: Подробнее
 popup_height: null
@@ -67,3 +65,5 @@ domain_all_sites: false
 _core:
   default_config_hash: HwyPQpj5lIcdzj0xE5VMS12fUdAv7dXaSueT8crtmHk
 cookie_session: 0
+show_more_info: true
+popup_more_info_button_message: Подробнее
