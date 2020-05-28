@@ -17,20 +17,6 @@ use Drupal\commerce_product\Entity\ProductType;
 class ArtYandexMarketSettingsForm extends ConfigFormBase {
 
   /**
-   * An array with available node types.
-   *
-   * @var array|mixed
-   */
-  protected $productBundles;
-
-  /**
-   * Node storage.
-   *
-   * @var \Drupal\node\NodeStorageInterface
-   */
-  protected $nodeStorage;
-
-  /**
    * {@inheritdoc}
    */
   public function getFormID() {
@@ -81,13 +67,13 @@ class ArtYandexMarketSettingsForm extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
-    $form['types'] = [
-      '#type' => 'checkboxes',
-      '#title' => t('Select product types for export'),
-      '#options' => $this->getProductTypes(),
-      '#default_value' => $config->get('types'),
-      '#required' => TRUE,
-    ];
+//    $form['types'] = [
+//      '#type' => 'checkboxes',
+//      '#title' => t('Select product types for export'),
+//      '#options' => $this->getProductTypes(),
+//      '#default_value' => $config->get('types'),
+//      '#required' => TRUE,
+//    ];
 
     $form['stock'] = [
       '#type' => 'select',
@@ -124,13 +110,13 @@ class ArtYandexMarketSettingsForm extends ConfigFormBase {
       ->save();
   }
 
-  /**
-   * Get all product types
-   * @return array
-   */
-  public function getProductTypes() {
-    $product_types = ProductType::loadMultiple();
-    return array_keys($product_types);
-  }
+//  /**
+//   * Get all product types
+//   * @return array
+//   */
+//  public function getProductTypes() {
+//    $product_types = ProductType::loadMultiple();
+//    return array_keys($product_types);
+//  }
 
 }
