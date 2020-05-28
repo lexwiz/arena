@@ -167,7 +167,7 @@ class ArtYandexMarketForm extends FormBase {
 
     $offer_simple
       //      ->setBid(80)
-      ->setVendor($this->getTermName($product->get('field_brand')->target_id))
+      ->setVendor(Term::load($product->get('field_brand')->target_id)->getName())
       //      ->setOldPrice(9900)
       ->setPicture($this->getMediaImage($product->get('field_photo')->target_id))
       ->setStore(FALSE)
@@ -178,7 +178,7 @@ class ArtYandexMarketForm extends FormBase {
       //      ->addParam(new Param('Цвет', 'белый'))
 //      ->setSalesNotes('Необходимо предоплата.')
       ->setManufacturerWarranty(TRUE)
-      ->setCountryOfOrigin($this->getTermName($product->get('field_country')->target_id))
+      ->setCountryOfOrigin(Term::load($product->get('field_country')->target_id)->getName())
       ->setBarcode($variation_date['barcode']);
 
     $offers->addOffer($offer_simple);
@@ -206,11 +206,11 @@ class ArtYandexMarketForm extends FormBase {
 
   }
 
-  public function getTermName ($tid) {
-    $tern_name = Term::load($tid)->getName();
-    return $tern_name;
-
-  }
+//  public function getTermName ($tid) {
+//    $tern_name = Term::load($tid)->getName();
+//    return $tern_name;
+//
+//  }
 
   public function getCommercePrice ($pid) {
     $result = [];
