@@ -20,6 +20,7 @@ use Drupal\yandex_yml\YandexYml\Delivery\DeliveryOption;
 use Drupal\yandex_yml\YandexYml\Offer\Offers;
 use Drupal\yandex_yml\YandexYml\Offer\OfferSimple;
 
+use \Drupal\commerce_product\Entity\Product;
 use Drupal\commerce_product\Entity\ProductVariation;
 
 use Drupal\taxonomy\Entity\Term;
@@ -167,7 +168,7 @@ class ArtYandexMarketForm extends FormBase {
 
     $offer_simple
       //      ->setBid(80)
-      ->setVendor(Term::load($product->get('field_brand')->target_id)->getName())
+      ->setVendor(Term::load((int)$product->get('field_brand')->target_id)->getName())
       //      ->setOldPrice(9900)
       ->setPicture($this->getMediaImage($product->get('field_photo')->target_id))
       ->setStore(FALSE)
@@ -178,7 +179,7 @@ class ArtYandexMarketForm extends FormBase {
       //      ->addParam(new Param('Цвет', 'белый'))
 //      ->setSalesNotes('Необходимо предоплата.')
       ->setManufacturerWarranty(TRUE)
-      ->setCountryOfOrigin(Term::load($product->get('field_country')->target_id)->getName())
+      ->setCountryOfOrigin(Term::load((int)$product->get('field_country')->target_id)->getName())
       ->setBarcode($variation_date['barcode']);
 
     $offers->addOffer($offer_simple);
