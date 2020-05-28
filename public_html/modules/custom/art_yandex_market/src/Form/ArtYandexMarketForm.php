@@ -20,7 +20,6 @@ use Drupal\yandex_yml\YandexYml\Delivery\DeliveryOption;
 use Drupal\yandex_yml\YandexYml\Offer\Offers;
 use Drupal\yandex_yml\YandexYml\Offer\OfferSimple;
 
-use \Drupal\commerce_product\Entity\Product;
 use Drupal\commerce_product\Entity\ProductVariation;
 
 use Drupal\taxonomy\Entity\Term;
@@ -168,7 +167,7 @@ class ArtYandexMarketForm extends FormBase {
 
     $offer_simple
       //      ->setBid(80)
-      ->setVendor(Term::load((int)$product->get('field_brand')->target_id)->getName())
+      ->setVendor($this->getTermName($product->get('field_brand')->target_id))
       //      ->setOldPrice(9900)
       ->setPicture($this->getMediaImage($product->get('field_photo')->target_id))
       ->setStore(FALSE)
@@ -179,7 +178,7 @@ class ArtYandexMarketForm extends FormBase {
       //      ->addParam(new Param('Цвет', 'белый'))
 //      ->setSalesNotes('Необходимо предоплата.')
       ->setManufacturerWarranty(TRUE)
-      ->setCountryOfOrigin(Term::load((int)$product->get('field_country')->target_id)->getName())
+      ->setCountryOfOrigin($this->getTermName($product->get('field_country')->target_id))
       ->setBarcode($variation_date['barcode']);
 
     $offers->addOffer($offer_simple);
@@ -207,11 +206,17 @@ class ArtYandexMarketForm extends FormBase {
 
   }
 
-//  public function getTermName ($tid) {
-//    $tern_name = Term::load($tid)->getName();
-//    return $tern_name;
-//
-//  }
+  public function getTermName ($tid) {
+    if (is_null($tid)){
+      $term_name = $this->t("No name");
+    }
+    else {
+      $term_name = Term::load($tid)->getName();
+    }
+    
+    return $term_name;
+
+  }
 
   public function getCommercePrice ($pid) {
     $result = [];
