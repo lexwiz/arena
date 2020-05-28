@@ -1,0 +1,56 @@
+
+
+Wed May 27 09:21:39 2020
+Command line: TestDisk
+
+TestDisk 7.1, Data Recovery Utility, July 2019
+Christophe GRENIER <grenier@cgsecurity.org>
+https://www.cgsecurity.org
+OS: Linux, kernel 5.4.0-31-generic (#35-Ubuntu SMP Thu May 7 20:20:34 UTC 2020) x86_64
+Compiler: GCC 9.2
+ext2fs lib: 1.45.5, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: none, curses lib: ncurses 6.1
+User is not root!
+Hard disk list
+
+
+TestDisk exited normally.
+Using locale 'ru_RU.UTF-8'.
+
+
+Wed May 27 09:21:40 2020
+Command line: TestDisk /debug
+
+TestDisk 7.1, Data Recovery Utility, July 2019
+Christophe GRENIER <grenier@cgsecurity.org>
+https://www.cgsecurity.org
+OS: Linux, kernel 5.4.0-31-generic (#35-Ubuntu SMP Thu May 7 20:20:34 UTC 2020) x86_64
+Compiler: GCC 9.2
+ext2fs lib: 1.45.5, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: none, curses lib: ncurses 6.1
+/dev/sda: LBA, HPA, LBA48, DCO support
+/dev/sda: size       1953525168 sectors
+/dev/sda: user_max   1953525168 sectors
+/dev/sda: native_max 1953525168 sectors
+Warning: can't get size for Disk /dev/mapper/control - 0 B - 0 sectors, sector size=512
+Warning: can't get size for Disk /dev/loop16 - 0 B - 0 sectors, sector size=512
+Hard disk list
+Disk /dev/sda - 1000 GB / 931 GiB - CHS 121601 255 63, sector size=512 - ST1000DM003-1CH162, S/N:S1D6V7H2, FW:CC44
+Disk /dev/sdd - 15 GB / 14 GiB - CHS 15200 64 32, sector size=512 - USB Flash Disk, FW:1100
+Disk /dev/loop0 - 163 MB / 156 MiB - 319872 sectors (RO), sector size=512
+Disk /dev/loop1 - 161 MB / 154 MiB - 315920 sectors (RO), sector size=512
+Disk /dev/loop10 - 8310 KB / 8116 KiB - 16232 sectors (RO), sector size=512
+Disk /dev/loop11 - 8306 KB / 8112 KiB - 16224 sectors (RO), sector size=512
+Disk /dev/loop12 - 15 MB / 14 MiB - 30448 sectors (RO), sector size=512
+Disk /dev/loop13 - 15 MB / 14 MiB - 30448 sectors (RO), sector size=512
+Disk /dev/loop14 - 16 KB / 16 KiB - 32 sectors (RO), sector size=512
+Disk /dev/loop15 - 16 KB / 16 KiB - 32 sectors (RO), sector size=512
+Disk /dev/loop2 - 98 MB / 93 MiB - 192064 sectors (RO), sector size=512
+Disk /dev/loop3 - 98 MB / 93 MiB - 192352 sectors (RO), sector size=512
+Disk /dev/loop4 - 57 MB / 54 MiB - 112528 sectors (RO), sector size=512
+Disk /dev/loop5 - 57 MB / 54 MiB - 112536 sectors (RO), sector size=512
+Disk /dev/loop6 - 29 MB / 28 MiB - 58512 sectors (RO), sector size=512
+Disk /dev/loop7 - 57 MB / 54 MiB - 112264 sectors (RO), sector size=512
+Disk /dev/loop8 - 65 MB / 62 MiB - 127160 sectors (RO), sector size=512
+Disk /dev/loop9 - 29 MB / 28 MiB - 58488 sectors (RO), sector size=512
+
+
+TestDisk exited normally.
