@@ -168,6 +168,7 @@ class ArtYandexMarketForm extends FormBase {
     $offer_simple
       //      ->setBid(80)
       ->setVendor($this->getTermName($product->get('field_brand')->target_id))
+      ->setVendorCode($variation_date['sku_m'])
       //      ->setOldPrice(9900)
       ->setPicture($this->getMediaImage($product->get('field_photo')->target_id))
       ->setStore(FALSE)
@@ -213,7 +214,7 @@ class ArtYandexMarketForm extends FormBase {
     else {
       $term_name = Term::load($tid)->getName();
     }
-    
+
     return $term_name;
 
   }
@@ -223,7 +224,20 @@ class ArtYandexMarketForm extends FormBase {
     $product_variation = ProductVariation::load($pid);
     $result['price_number'] = round($product_variation->get('price')->number,2);
     //$price_currency = $product_variation->get('price')-
-    $result['barcode'] = (int)$product_variation->get('field_barcode')->value;
+    if ($product_variation->get('field_barcode')->value) {
+      $result['barcode'] = (int)$product_variation->get('field_barcode')->value;
+    }
+    else {
+      $result['barcode'] = $this->t("No name");
+    }
+
+    if ($product_variation->get('field_sku_m')->value) {
+      $result['sku_m'] = $product_variation->get('field_sku_m')->value;
+    }
+    else {
+      $result['sku_m'] = $this->t("No name");
+    }
+    
     return $result;
 
   }
