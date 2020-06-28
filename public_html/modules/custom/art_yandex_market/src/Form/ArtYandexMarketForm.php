@@ -237,7 +237,7 @@ class ArtYandexMarketForm extends FormBase {
     else {
       $result['sku_m'] = $this->t("No name");
     }
-    
+
     return $result;
 
   }
