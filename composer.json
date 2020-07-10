@@ -21,7 +21,7 @@
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/admin_toolbar": "^2.0",
-        "drupal/better_exposed_filters": "^3.0",
+        "drupal/better_exposed_filters": "^4.0",
         "drupal/block_class": "^1.2",
         "drupal/bootstrap": "^3.20",
         "drupal/bootstrap_basic_image_gallery": "1.x-dev",
