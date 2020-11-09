@@ -83,6 +83,8 @@ display:
           col_sm: col-sm-6
           col_md: col-md-6
           col_lg: col-lg-3
+          col_class_default: 1
+          row_class_default: 1
       row:
         type: 'entity:commerce_product'
         options:
@@ -491,6 +493,8 @@ display:
           col_sm: col-sm-6
           col_md: col-md-6
           col_lg: col-lg-3
+          col_class_default: 1
+          row_class_default: 1
       row:
         type: 'entity:commerce_product'
         options:

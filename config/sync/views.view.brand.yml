@@ -137,6 +137,8 @@ display:
           col_sm: col-sm-2
           col_md: col-md-2
           col_lg: col-lg-2
+          col_class_default: 1
+          row_class_default: 1
       row:
         type: 'entity:taxonomy_term'
         options:
@@ -436,6 +438,8 @@ display:
           col_sm: col-sm-2
           col_md: col-md-2
           col_lg: col-lg-2
+          col_class_default: 1
+          row_class_default: 1
       defaults:
         style: false
         row: false

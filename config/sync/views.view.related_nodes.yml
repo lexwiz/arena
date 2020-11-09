@@ -62,6 +62,8 @@ display:
           col_sm: col-sm-6
           col_md: col-md-4
           col_lg: col-lg-4
+          col_class_default: 1
+          row_class_default: 1
       row:
         type: 'entity:commerce_product'
         options:
