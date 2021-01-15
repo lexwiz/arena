@@ -118,6 +118,9 @@
             "drush/Commands/{$name}": ["type:drupal-drush"]
         },
         "patches": {
+            "drupal/commerce": {
+            "Assumed Use of Inline Sub-Forms": "https://www.drupal.org/files/issues/2019-09-08/assumed-subform-3079973-2.patch"
+            },
             "drupal/ajax_add_to_cart": {
             "Not compatible with product attributes": "https://www.drupal.org/files/issues/2019-08-27/ajax_add_to_cart-compatibility-product-attributes-3077349-2.patch",
             "ajax error when click add to cart": "https://www.drupal.org/files/issues/2019-11-21/3026540-messages-6.patch",
